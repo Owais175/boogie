@@ -16,17 +16,17 @@
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <script>
         function formpush() {
-        document.getElementById('img_push').submit(); // Submits the form when Upload is clicked
+        document.getElementById('img_push').submit(); 
     }
 </script>
 
 <script>
     document.getElementById('uploadImage').addEventListener('change', function(event) {
         let previewContainer = document.getElementById('imagePreview');
-        previewContainer.innerHTML = ""; // Purana preview hatao
+        previewContainer.innerHTML = ""; 
 
-        let files = Array.from(event.target.files); // Files ka array
-        let dataTransfer = new DataTransfer(); // Naya DataTransfer object
+        let files = Array.from(event.target.files); 
+        let dataTransfer = new DataTransfer(); 
 
         files.forEach((file, index) => {
             let reader = new FileReader();
@@ -59,12 +59,12 @@
                 removeBtn.style.fontSize = "12px";
 
                 removeBtn.addEventListener("click", function() {
-                    previewDiv.remove(); // Preview se remove karo
-                    files.splice(index, 1); // Files array se remove karo
+                    previewDiv.remove(); 
+                    files.splice(index, 1); 
                     dataTransfer.items.clear();
                     files.forEach(f => dataTransfer.items.add(f));
                     document.getElementById('uploadImage').files = dataTransfer
-                        .files; // Updated files set karo
+                        .files;
                 });
 
                 previewDiv.appendChild(img);
@@ -72,10 +72,10 @@
                 previewContainer.appendChild(previewDiv);
             };
             reader.readAsDataURL(file);
-            dataTransfer.items.add(file); // File list me add karo
+            dataTransfer.items.add(file); 
         });
 
-        document.getElementById('uploadImage').files = dataTransfer.files; // Updated files set karo
+        document.getElementById('uploadImage').files = dataTransfer.files; 
     });
 </script>
 {{-- <script>
@@ -93,7 +93,6 @@
         $(".swiper-wrapper").append(slide);
     });
 
-    // console.log(document.querySelector('.swiper-slide-next img'));
 </script> --}}
 <script>
     let canvas = document.getElementById("imageCanvas");
@@ -106,11 +105,6 @@
     let templateWidth = 150,
         templateHeight = 150;
 
-    // PNG Template Image
-
-    // templateImage.src = "{{ asset('assets/images/Gecko-hoodie-and-glasses.png') }}";
-
-    // ✅ Fix: Canvas Size hamesha 500x500
     canvas.width = 500;
     canvas.height = 500;
 
@@ -120,7 +114,7 @@
             let reader = new FileReader();
             reader.onload = function(e) {
                 userImage.onload = () => {
-                    drawCanvas(); // Image ko canvas par adjust karo
+                    drawCanvas();
                     new bootstrap.Modal(document.getElementById("imageEditorModal")).show();
                 };
                 userImage.src = e.target.result;
@@ -132,21 +126,17 @@
     function drawCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // ✅ Fix: Image ko canvas ke andar fit dikhana
         let scale = Math.min(canvas.width / userImage.width, canvas.height / userImage.height);
         let imgWidth = userImage.width * scale;
         let imgHeight = userImage.height * scale;
         let imgX = (canvas.width - imgWidth) / 2;
         let imgY = (canvas.height - imgHeight) / 2;
 
-        // 🟢 **Canvas par Image ko adjust karke draw karo**
         ctx.drawImage(userImage, imgX, imgY, imgWidth, imgHeight);
 
-        // 🟢 **PNG ko bhi draw karo**
         ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
     }
-
-    // ✅ Fix: Unlimited PNG Move Allowed
+    
     canvas.addEventListener("mousedown", (e) => {
         let mouseX = e.offsetX;
         let mouseY = e.offsetY;
