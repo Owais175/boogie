@@ -84,22 +84,22 @@
                 <ul class="footer-first-child">
                     <li>
                         <h6>
-                            <a href="javascript:;">
+                            <a href="assets/images/boogie.pdf" target="_blank">
                                 Whitepaper
                             </a>
                         </h6>
                     </li>
                     <li>
                         <h6>
-                            <a href="javascript:;">
-                                Merch
+                            <a href="https://www.boogie.fun/">
+                               Boogie.fun
                             </a>
                         </h6>
                     </li>
-                    <li class="footer-gap-btn">
+                    <li>
                         <h6>
-                            <a href="javascript:;" class="footer-buy-btn">
-                                Buy
+                            <a href="{{route('home')}}">
+                                 <img src="{{ asset('assets/images/boogie-logo.png') }}" class="img-fluid" alt="">
                             </a>
                         </h6>
                     </li>

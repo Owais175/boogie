@@ -159,6 +159,11 @@ class HomeController extends Controller
     {
         return view('home_con.add_content', compact('youtube'));
     }
+    
+    public function portfolio()
+    {
+        return view('portfolio');
+    }
 
     // public function upload_content(Request $request)
     // {

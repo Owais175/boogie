@@ -14,7 +14,11 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
-
+<script>
+        function formpush() {
+        document.getElementById('img_push').submit(); // Submits the form when Upload is clicked
+    }
+</script>
 
 <script>
     document.getElementById('uploadImage').addEventListener('change', function(event) {

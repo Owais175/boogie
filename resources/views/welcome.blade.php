@@ -1093,20 +1093,23 @@
                             <div class="col-lg-12">
                                 <div class="custom-image-bropper" style="cursor: pointer">
                                     <form action="{{ route('gallery_images') }}" method="POST"
-                                        enctype="multipart/form-data">
+                                        enctype="multipart/form-data" id="img_push">
                                         @csrf
                                         <div class="meme-generator">
-                                            <label for="uploadImage">"Put the Glasses On" Meme
-                                                <span class="filepond--label-action" style="color: #fff" tabindex="0">
+                                           <div class="meme-generator" style="
+                                                    position: relative;
+                                                    z-index: -1;">"Put the Glasses On" Meme
+                                                <span class="filepond--label-action" style="color: #fff" tabindex="0" >
                                                     Generator</span>
                                             </label>
                                             <div id="imagePreview" style="margin-top: 10px"></div>
                                         </div>
                                         <p>Take a photo op with Boogie!</p>
-                                        <input type="file" hidden accept="image/png, image/jpeg, image/gif"
+                                        <input type="file" accept="image/png, image/jpeg, image/gif"
                                             class="filepond visually-hidden" id="uploadImage" name="images[]" multiple
                                             data-max-file-size="50MB" data-max-files="5" />
-                                        <button type="submit" class="">Click here</button>
+                                        <button type="button" class="">Click here</button>
+                                        <button type="submit" hidden class=""></button>
                                     </form>
                                 </div>
                             </div>
@@ -1129,6 +1132,8 @@
                                             <canvas id="imageCanvas" height="100px" width="100"></canvas>
                                         </div>
                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-success"
+                                                onclick="formpush()">Upload</button>
                                             <button type="button" class="btn btn-success"
                                                 onclick="downloadImage()">Download Image</button>
                                         </div>

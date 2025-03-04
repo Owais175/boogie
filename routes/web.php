@@ -173,6 +173,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'HomeController@contact')->name('contact');
 Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
 
 
 Route::get('/set_sub_category', 'Admin\ProductController@set_sub_category')->name('set_sub_category');
