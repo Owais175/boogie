@@ -77,7 +77,7 @@
                 <div class="parent-marquee owl-carousel owl-theme">
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -90,7 +90,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -116,7 +116,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -129,7 +129,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -142,7 +142,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -168,7 +168,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -181,7 +181,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -194,7 +194,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -207,7 +207,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -220,7 +220,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -233,7 +233,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -246,7 +246,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -259,7 +259,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -272,7 +272,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -285,7 +285,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -298,7 +298,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -311,7 +311,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -324,7 +324,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -337,7 +337,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -350,7 +350,7 @@
                     </div>
                     <div class="item child-marquee">
                         <figure>
-                            <img src="images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp" class="img-fluid"
+                            <img src="{{asset("assets/images/b8489a_a01f0deee1b445c78300fdabc3707746~mv2.webp")}}" class="img-fluid"
                                 alt="">
                         </figure>
                         <button class="btn hover-btn">
@@ -416,7 +416,7 @@
                 </div>
             </div>
 
-            <button class="scroll-btn" data-target="#target-section" id="play-btn"> <img src="images/Down-Arrow-01.png"
+            <button class="scroll-btn" data-target="#target-section" id="play-btn"> <img src="{{asset("assets/images/Down-Arrow-01.png")}}"
                     class="img-fluid"> </button>
 
         </section>
