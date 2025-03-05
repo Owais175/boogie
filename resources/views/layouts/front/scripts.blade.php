@@ -15,6 +15,25 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <script>
+    
+    var btn = $('#bottomtotop');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 500) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '500');
+});
+
+
+</script>
+<script>
         function formpush() {
         document.getElementById('img_push').submit(); 
     }

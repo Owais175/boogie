@@ -92,10 +92,10 @@ figure.box {
     right: 0;
 }
 .product-list {
-    background: #f8ee00;
+    /*background: #f8ee00;*/
     padding-top: 4rem;
     padding-bottom: 4rem;
-    height: 100vh;
+    /*height: 100vh;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,7 +263,267 @@ header {
 }
 
 section.certik p {
+    /*font-size: 18px;*/
+}
+
+.left-eye img {
+    width: 70px !important;!i;!;
+}
+
+.left-eye {
+    top: 11px;
+    left: 138px;
+}
+
+.right-eye img {
+    width: 70px !important;!i;!;
+}
+
+.right-eye {
+    top: 10px;
+    right: 200px;
+}
+
+.custom-image-bropper {
+    margin-top: 30px;
+}
+
+.dancing-section {
+    padding-left: 3rem;
+}
+
+.dancing-sec-right {
+    width: 100%;
+    height: 660px;
+}
+
+.dancing-section .para {
+    font-size: 20px;
+}
+
+.dancing-section .heading-3 {
+    font-size: 25px;
+}
+.product-child {width: 65%;margin: auto;margin-bottom: 45px;}
+
+.roadmap-content.chart-2\.0 {
+    height: 600px;
+            width: 70%;
+        margin: auto;
+    margin-bottom: 50px;
+}
+.roadmap-content {
+
+            width: 70%;
+        margin: auto;
+}
+
+}
+
+@media (max-width: 767px) {
+    .main-hero-content {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+span.intro {
+    left: 0;
+    right: 0;
+}
+
+.boogie-content {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.left-eye {
+    left: 123px;
+}
+
+.left-eye img {
+    width: 65px !important;
+}
+
+.right-eye {
+    right: 186px;
+}
+
+.child-marquee img {width: 25% !important;
+    
+}
+
+.marquee-section.marquee {
+    margin-bottom: 0;
+}
+
+.cta-section {
+    padding: 10rem 0 12rem;
+}
+
+.copy-links {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.copy-clip {
+    background: transparent;
+    display: block;
+    text-align: center;
+    padding-top: 0;
+}
+
+.copy-links span {
+    color: white !important;!i;!;
+}
+.stage-toggie-ces.animate .MusicPlayer2802357603__root {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#animated-sec.in-view figure.box {
+    position: unset;
+    text-align: center;
+}
+
+.what-is-boogie.who-is-boggie {
+    display: block;
+}
+
+.what-is-boogie.who-is-boggie .boogie-content h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.parent-sticky figure.box img {
+    max-width: 60%;
+}
+
+.custom-image-bropper {
+    width: 100%;
+}
+
+.meme-generator {
+    font-size: 20px;
+}
+
+.dancing-section {
+    padding-top: 2rem;
+    padding-left: 0;
+}
+
+.dancing-section .para {
+    color: white;
+}
+
+#dancingVideo {
+    height: 550px;
+}
+
+.dancing-sec-right {height: 550px;}
+
+.dancing-sec-left {
+    padding-left: 1rem;
+}
+
+
+.product-child {
+    width: 100%;
+}
+
+.roadmap-content.chart-2\.0 {
+    width: 100%;
+    height: 400px;
+}
+
+.roadmap-content {
+    width: 100%;
+}
+
+.parent-ul-road-map {
+    display: block;
+}
+
+.parent-ul-road-map ul {
+    margin-bottom: 40px;
+}
+
+h1.heading-2 {
+    font-size: 1.5rem;
+    padding-top: 0;
+}
+
+.content {
+            padding-bottom: 3rem;
+        padding-top: 3rem;
+}
+
+.card.con-df {
+    height: 300px;
+    margin-bottom: 80px;
+}
+
+section.certik p {
+    font-size: 20px   !important;
+}
+
+footer.section {
+    padding: 4rem 2%;
+}
+
+ul.footer-first-child li h6 {
+    font-size: 17px;
+}
+
+ul.footer-first-child h5 {
+    font-size: 17px;
+}
+
+.bottom-footer {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 575px) {
+   .right-eye {
+    right: 123px;
+    top: 14px;
+}
+
+.left-eye {
+    left: 62px;
+} 
+    .cta-content .btn.custom-btn {
+    width: 100%;
+}
+
+.what-is-boogie.who-is-boggie .para {
+    font-size: 22px !important;
+}
+
+.gallery-item .heading-2 {
+    font-size: 1.5rem;
+}
+
+.meme-generator {
+    font-size: 16px;
+}
+
+.custom-image-bropper p {
     font-size: 18px;
 }
+
+.dancing-section .para {width: 100% !important;}
+
+.roadmap-content.chart-2\.0 {
+    height: 250px;
     
+}
+
+.parent-marquee-2 .child-marquee.item img {
+    width: 100% !important;!;
+}
 }

@@ -1,7 +1,7 @@
 <footer class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-4">
                 <ul class="footer-first-child">
                     <li>
                         <h6>
@@ -42,7 +42,7 @@
             </div>
 
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-4">
                 <ul class="footer-first-child footer-second-child">
                     <li>
                         <h5>
@@ -80,7 +80,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-4">
                 <ul class="footer-first-child">
                     <li>
                         <h6>
