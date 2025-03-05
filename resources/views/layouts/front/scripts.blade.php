@@ -78,22 +78,6 @@
         document.getElementById('uploadImage').files = dataTransfer.files; 
     });
 </script>
-{{-- <script>
-    let images = @json($images);
-
-    $.each(images, function(index, image) {
-        let slide = `
-        <div class="swiper-slide">
-            <a data-fancybox="gallery" href="${image.path}">
-                <img src="${image.path}" class="img-fluid" />
-            </a>
-        </div>
-    `;
-
-        $(".swiper-wrapper").append(slide);
-    });
-
-</script> --}}
 <script>
     let canvas = document.getElementById("imageCanvas");
     let ctx = canvas.getContext("2d");
@@ -136,7 +120,7 @@
 
         ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
     }
-    
+
     canvas.addEventListener("mousedown", (e) => {
         let mouseX = e.offsetX;
         let mouseY = e.offsetY;
@@ -245,7 +229,6 @@
                         const meme_img = nextSlide.querySelector('img');
                         if (meme_img) {
                             templateImage.src = meme_img.src;
-                            console.log("Updated templateImage:", templateImage.src);
                         }
                     }
                 }, 100);
@@ -254,15 +237,13 @@
 
     });
     // ✅ Stop Swiper autoplay when clicking the label
-    document.querySelector('label[for="uploadImage"]').addEventListener('click', function() {
+    document.querySelector(".stop_slider").addEventListener("click", function() {
         swiper.autoplay.stop(); // 🛑 Stop autoplay
-        console.log("Swiper Stopped!");
     });
 
     // ✅ Restart Swiper autoplay when modal is closed
     document.getElementById("imageEditorModal").addEventListener("hidden.bs.modal", function() {
         swiper.autoplay.start(); // ▶ Restart autoplay
-        console.log("Swiper Restarted!");
     });
 </script>
 
