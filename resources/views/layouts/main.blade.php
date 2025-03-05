@@ -36,6 +36,8 @@
 </head>
 
 <body>
+    
+    <div id="bottomtotop"><i class="fa-solid fa-arrow-up"></i></div>
 
 
     @include('layouts/front.header')

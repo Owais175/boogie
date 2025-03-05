@@ -7,7 +7,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12 col-12">
                 <div class="social-links">
                     <span>
                         <a href="javascript:;">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12 col-12">
                 <div class="main-hero-content">
                     <span class="intro">​
                         ​Introducing
@@ -46,10 +46,10 @@
     <section class="what-is-boogie">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-12">
                     {!! $page->content !!}
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-12">
                     <div class="boogie-img">
                         <div class="left-eye">
                             <img src="{!! $section[23]->value !!}" class="img-fluid">
@@ -365,7 +365,7 @@
             </div>
             <div class="container" id="buy">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-12">
                         <div class="cta-content">
                             <button class="btn custom-btn">BUY</button>
                         </div>
@@ -450,7 +450,7 @@
                 </span>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="stage-boggie" id="target-section">
                                 <figure>
                                     <img src="{{ asset('assets/images/Boogiedancing-HD_0_]1740587257.gif') }}"
@@ -735,10 +735,10 @@
             <section class="what-is-boogie who-is-boggie">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-12">
                             {!! $section[2]->value !!}
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <div class="boogie-img">
                                 <!--<h2>-->
                                 <!--    Boogie's Motto-->
@@ -773,7 +773,7 @@
         <!--    <section class="boogie-ecosystem" id="ecosystem">-->
         <!--        <div class="container">-->
         <!--            <div class="row">-->
-        <!--                <div class="col-lg-12">-->
+        <!--                <div class="col-lg-12 col-md-12 col-12">-->
         <!--                    <div class="ecosystem-parent">-->
         <!--                        <div class="boogie-direction">-->
         <!--                            <figure>-->
@@ -861,9 +861,9 @@
             <section class="gallery-item">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 col-md-12 col-12">
                                     <div class="title">
                                         <h2 class="heading-2">
                                             {!! $section[3]->value !!}
@@ -874,7 +874,7 @@
                         </div>
                     </div>
                     <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="gallery-item-slider">
                                 <!-- Swiper -->
                                 <div class="swiper mySwiper">
@@ -1061,7 +1061,7 @@
                                 <div class="swiper-button-prev arrow"></div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <form action="{{ route('gallery_images') }}" method="POST" enctype="multipart/form-data"
                                 hidden>
                                 @csrf
@@ -1090,7 +1090,7 @@
                                 </form>
                             </div> --}}
 
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-md-12 col-12">
                                 <div class="custom-image-bropper" style="cursor: pointer">
                                     <form action="{{ route('gallery_images') }}" method="POST"
                                         enctype="multipart/form-data" id="img_push">
@@ -1152,13 +1152,13 @@
             <section class="dancing-section">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4 col-12">
                             <div class="dancing-sec-left">
                                 {!! $section[21]->value !!}
                                 {!! $section[22]->value !!}
                             </div>
                         </div>
-                        <div class="col-lg-8 p-0">
+                        <div class="col-lg-8 col-md-8 col-12 p-0">
                             <div class="dancing-sec-right">
                                 <video id="dancingVideo" src="{{ asset('assets/images/boggie-dancing.mp4') }}"
                                     playsinline preload="auto" muted loop tabindex="-1" autoplay></video>
@@ -1191,7 +1191,7 @@
             <section class="product-list">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="product-parent">
                                 <div class="product-child">
                                     <span>
@@ -1267,13 +1267,13 @@
                         <h1 class="heading-2"> {!! $section[8]->value !!}</h1>
                     </div>
                     <div class="row">
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[9]->value !!}
                         </div>
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[10]->value !!}
                         </div>
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[11]->value !!}
                         </div>
                     </div>
@@ -1285,7 +1285,7 @@
         <div class="section">
             <section class="logos-new">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-12">
                         <div class="gallery-item-parent">
                             <ul class="parent-marquee-2 owl-carousel owl-theme">
                                 <li class="item">
@@ -1359,7 +1359,7 @@
             <section class="certik">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-12 col-12">
+                        <div class="col-lg-12 col-md-12 col-12 col-12">
                             <div class="parent-last-video">
                                 <figure>
                                     <img src="{{ asset('assets/images/boggie-video-poster.png') }}" class="img-fluid"
@@ -1378,12 +1378,12 @@
             <section class="certik">
                 <div class="container">
                     <div class="row align-items-start justify-content-center">
-                        <div class="col-lg-4 col-12">
+                        <div class="col-lg-4 col-md-4 col-6">
                             <figure>
                                 <img src="{!! $section[14]->value !!}" class="img-fluid" alt="">
                             </figure>
                         </div>
-                        <div class="col-xxl-6 col-xl-5 col-lg-4 col-md-5 col-12">
+                        <div class="col-xxl-6 col-xl-5 col-lg-4 col-md-4 col-6">
                             <div class="parent-last-video">
                                 <p class="certik-right">
                                      {!! $section[12]->value !!}
