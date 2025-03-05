@@ -1,529 +1,562 @@
 @media (max-width: 1400px) {
-    
-    .Jackson-Walk-Earth {
-    height: 800px;
-}
 
-    
-    .boogie-ecosystem{
+    .Jackson-Walk-Earth {
+        height: 800px;
+    }
+
+
+    .boogie-ecosystem {
         padding-top: 14rem;
     }
-    
- span.vibrant {
-    position: relative;
-    right: -631px;
-    font-size: 1rem;
-    font-weight: 500;
-    bottom: 23px;
-}
 
-/*.who-is-boggie .boogie-img .img-setting {*/
-/*    position: absolute;*/
-/*    top: -230px;*/
-/*    width: 100%;*/
-/*    height: 700px !important;*/
-/*    right: -120px;*/
-/*}*/
+    span.vibrant {
+        position: relative;
+        right: -631px;
+        font-size: 1rem;
+        font-weight: 500;
+        bottom: 23px;
+    }
+
+    /*.who-is-boggie .boogie-img .img-setting {*/
+    /*    position: absolute;*/
+    /*    top: -230px;*/
+    /*    width: 100%;*/
+    /*    height: 700px !important;*/
+    /*    right: -120px;*/
+    /*}*/
 
 
-figure.box {
-    position: absolute;
-    right: -40px;
-    top: 0;
-}
+    figure.box {
+        position: absolute;
+        right: -40px;
+        top: 0;
+    }
 
- .main-hero-content img {
-    /* width: 100%; */
-    /* height: 90px; */
-    /* object-fit: contain; */
-    /* width: 661px; */
-    margin-top: -16px;
-}
+    .main-hero-content img {
+        /* width: 100%; */
+        /* height: 90px; */
+        /* object-fit: contain; */
+        /* width: 661px; */
+        margin-top: -16px;
+    }
 
- span.intro {
-    position: relative;
-    top: -9px;
-    right: -89px;
-    font-size: 23px;
-}
+    span.intro {
+        position: relative;
+        top: -9px;
+        right: -89px;
+        font-size: 23px;
+    }
 
-.copy-clip {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* background: #207bef; */
-    /* border-radius: 12px; */
-    gap: 40px;
-    width: 100%;
-    margin: auto;
-    padding: 20px 0;
-}
-.products-list {
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-}
-.ecosystem-child.ecosystem-child-1 {
-    position: absolute;
-    top: 130px;
-    left: -100px;
-}
-.ecosystem-child.ecosystem-child-4 {
-    position: absolute;
-    top: 360px;
-    left: -100px;
-}
+    .copy-clip {
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* background: #207bef; */
+        /* border-radius: 12px; */
+        gap: 40px;
+        width: 100%;
+        margin: auto;
+        padding: 20px 0;
+    }
 
-.ecosystem-child.ecosystem-child-3 {
-    position: absolute;
-    right: -82px;
-    top: 130px;
-} 
-.ecosystem-child.ecosystem-child-5 {
-    position: absolute;
-    right: -82px;
-    top: 360px;
-} 
-.ecosystem-child.ecosystem-child-2 {
-    width: 891px;
-    position: absolute;
-    top: -110px;
-    left: 130px;
-    right: 0;
-}
-.product-list {
-    /*background: #f8ee00;*/
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    /*height: 100vh;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.product-child span {
-    color: white;
-    font-size: 17px;
-    font-family: sriracha, cursive;
-}
-.roadmap-content {
-    background: #207bef;
-    padding: 0.5rem 4rem 0.5rem;
-    margin: 0.5rem 0 1rem 0;
-    box-shadow: 5.50px 9.53px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 20px 20px 20px 20px;
-    transition: all 0.4s ease-in-out 0s, visibility 0s;
-    position: relative;
-}
-.boogie-img img {
-    height: 475px;
-}
+    .products-list {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
 
-.product-child {
-    background: #207bef;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 69px;
-    margin: 0.8rem 0;
-    box-shadow: 5.50px 9.53px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 20px 20px 20px 20px;
-    transition: all 0.4s ease-in-out 0s, visibility 0s;
-}
-.ecosystem-child {
-    width: 392px;
-    padding: 1rem;
-}
-.parent-ul-road-map ul h4 {
-    font-size: 27px;
-    color: white;
-    font-family: sriracha, cursive;
-}
-.parent-ul-road-map ul li {
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
-    font-family: inherit;
-}
-.roadmap-content h3 {
-    text-align: center;
-    color: white;
-    font-family: sriracha, cursive;
-    font-size: 25px;
-}
-.gallery-item-parent ul li figure {
-    width: 210px;
-    height: 100px;
-    padding: 0px;
-}
+    .ecosystem-child.ecosystem-child-1 {
+        position: absolute;
+        top: 130px;
+        left: -100px;
+    }
 
-#comp-m3zk9l3q {
-    height: 70px;
-    width: 320px;
-    position: absolute;
-    right: 30px;
-    bottom: -249px;
-}
+    .ecosystem-child.ecosystem-child-4 {
+        position: absolute;
+        top: 360px;
+        left: -100px;
+    }
 
-.bottom-header h2 {
-    color: white;
-    margin: 0;
-    font-size: 29px;
-    width: 100%;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    font-family: sriracha, cursive;
-    background: rgba(32, 123, 239);
-    text-align: center;
-}
+    .ecosystem-child.ecosystem-child-3 {
+        position: absolute;
+        right: -82px;
+        top: 130px;
+    }
 
-.boogie-img img {
+    .ecosystem-child.ecosystem-child-5 {
+        position: absolute;
+        right: -82px;
+        top: 360px;
+    }
+
+    .ecosystem-child.ecosystem-child-2 {
+        width: 891px;
+        position: absolute;
+        top: -110px;
+        left: 130px;
+        right: 0;
+    }
+
+    .product-list {
+        /*background: #f8ee00;*/
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        /*height: 100vh;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .product-child span {
+        color: white;
+        font-size: 17px;
+        font-family: sriracha, cursive;
+    }
+
+    .roadmap-content {
+        background: #207bef;
+        padding: 0.5rem 4rem 0.5rem;
+        margin: 0.5rem 0 1rem 0;
+        box-shadow: 5.50px 9.53px 0px 0px rgba(0, 0, 0, 1);
+        border-radius: 20px 20px 20px 20px;
+        transition: all 0.4s ease-in-out 0s, visibility 0s;
+        position: relative;
+    }
+
+    .boogie-img img {
+        height: 475px;
+    }
+
+    .product-child {
+        background: #207bef;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 69px;
+        margin: 0.8rem 0;
+        box-shadow: 5.50px 9.53px 0px 0px rgba(0, 0, 0, 1);
+        border-radius: 20px 20px 20px 20px;
+        transition: all 0.4s ease-in-out 0s, visibility 0s;
+    }
+
+    .ecosystem-child {
+        width: 392px;
+        padding: 1rem;
+    }
+
+    .parent-ul-road-map ul h4 {
+        font-size: 27px;
+        color: white;
+        font-family: sriracha, cursive;
+    }
+
+    .parent-ul-road-map ul li {
+        color: white;
+        font-weight: 600;
+        font-size: 17px;
+        font-family: inherit;
+    }
+
+    .roadmap-content h3 {
+        text-align: center;
+        color: white;
+        font-family: sriracha, cursive;
+        font-size: 25px;
+    }
+
+    .gallery-item-parent ul li figure {
+        width: 210px;
+        height: 100px;
+        padding: 0px;
+    }
+
+    #comp-m3zk9l3q {
+        height: 70px;
+        width: 320px;
+        position: absolute;
+        right: 30px;
+        bottom: -249px;
+    }
+
+    .bottom-header h2 {
+        color: white;
+        margin: 0;
+        font-size: 29px;
+        width: 100%;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        font-family: sriracha, cursive;
+        background: rgba(32, 123, 239);
+        text-align: center;
+    }
+
+    .boogie-img img {
         height: auto;
         margin-top: -94px;
         width: 351px;
     }
-    
-.boogie-content h2 {
-    font-size: 30px;
-    font-family: sriracha, cursive;
-    text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px, #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
-    font-weight: 800;
-    margin-bottom: 0px;
-    margin-top: -46px;
-}
 
-.para {
-    font-family: sriracha, cursive;
-    font-size: 18px;
-    color: #000000;
-    width: 100%;
-}
-.what-is-boogie.who-is-boggie .boogie-img img {
-    animation: none;
-    height: 395px;
-}
-.boogie-ecosystem .boogie-direction img {
-    height: 630px;
-}
-.ecosystem-child .para {
-    color: white;
-    font-size: 21px;
-    line-height: 22px;
-}
-.ecosystem-child h3 {
-    color: white;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    font-family: sriracha, cursive;
-    font-weight: 600;
-    margin: 6px 0px 13px 0;
-    font-size: 25px;
-}
+    .boogie-content h2 {
+        font-size: 30px;
+        font-family: sriracha, cursive;
+        text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px, #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
+        font-weight: 800;
+        margin-bottom: 0px;
+        margin-top: -46px;
+    }
 
-.swiper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 0rem;
-}
+    .para {
+        font-family: sriracha, cursive;
+        font-size: 18px;
+        color: #000000;
+        width: 100%;
+    }
 
-.what-is-boogie.who-is-boggie .boogie-content h2 {
-    font-size: 3.7rem;
-}
-header {
-    padding-top: 45px;
-}
+    .what-is-boogie.who-is-boggie .boogie-img img {
+        animation: none;
+        height: 395px;
+    }
 
-.social-links {
-    margin-top: 5px;
-}
+    .boogie-ecosystem .boogie-direction img {
+        height: 630px;
+    }
 
-.cta-content .btn.custom-btn {
-    font-size: 2rem;
-}
+    .ecosystem-child .para {
+        color: white;
+        font-size: 21px;
+        line-height: 22px;
+    }
 
-.products-list span img {
-    width: 73px !important;
-}
+    .ecosystem-child h3 {
+        color: white;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        font-family: sriracha, cursive;
+        font-weight: 600;
+        margin: 6px 0px 13px 0;
+        font-size: 25px;
+    }
 
-.gallery-item-parent {
-    gap: 6rem;
-}
- .cta-content {
-    padding-top: 5rem;
-}
+    .swiper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0rem;
+    }
 
-.swiper-slide-next {
-    transform: scale(1.2) !important;
-}
+    .what-is-boogie.who-is-boggie .boogie-content h2 {
+        font-size: 3.7rem;
+    }
 
-.ecosystem {
-    padding: 6rem 2rem 7rem;
-}
+    header {
+        padding-top: 45px;
+    }
 
-section.certik p {
-    /*font-size: 18px;*/
-}
+    .social-links {
+        margin-top: 5px;
+    }
 
-.left-eye img {
-    width: 70px !important;!i;!;
-}
+    .cta-content .btn.custom-btn {
+        font-size: 2rem;
+    }
 
-.left-eye {
-    top: 11px;
-    left: 138px;
-}
+    .products-list span img {
+        width: 73px !important;
+    }
 
-.right-eye img {
-    width: 70px !important;!i;!;
-}
+    .gallery-item-parent {
+        gap: 6rem;
+    }
 
-.right-eye {
-    top: 10px;
-    right: 200px;
-}
+    .cta-content {
+        padding-top: 5rem;
+    }
 
-.custom-image-bropper {
-    margin-top: 30px;
-}
+    .swiper-slide-next {
+        transform: scale(1.2) !important;
+    }
 
-.dancing-section {
-    padding-left: 3rem;
-}
+    .ecosystem {
+        padding: 6rem 2rem 7rem;
+    }
 
-.dancing-sec-right {
-    width: 100%;
-    height: 660px;
-}
+    section.certik p {
+        /*font-size: 18px;*/
+    }
 
-.dancing-section .para {
-    font-size: 20px;
-}
+    .left-eye img {
+        width: 70px !important;
+    }
 
-.dancing-section .heading-3 {
-    font-size: 25px;
-}
-.product-child {width: 65%;margin: auto;margin-bottom: 45px;}
+    .left-eye {
+        top: 11px;
+        left: 138px;
+    }
 
-.roadmap-content.chart-2\.0 {
-    height: 600px;
-            width: 70%;
+    .right-eye img {
+        width: 70px !important;
+    }
+
+    .right-eye {
+        top: 10px;
+        right: 200px;
+    }
+
+    .custom-image-bropper {
+        margin-top: 30px;
+    }
+
+    .dancing-section {
+        padding-left: 3rem;
+    }
+
+    .dancing-sec-right {
+        width: 100%;
+        height: 660px;
+    }
+
+    .dancing-section .para {
+        font-size: 20px;
+    }
+
+    .dancing-section .heading-3 {
+        font-size: 25px;
+    }
+
+    .product-child {
+        width: 65%;
         margin: auto;
-    margin-bottom: 50px;
-}
-.roadmap-content {
+        margin-bottom: 45px;
+    }
 
-            width: 70%;
+    .roadmap-content.chart-2\.0 {
+        height: 600px;
+        width: 70%;
         margin: auto;
-}
+        margin-bottom: 50px;
+    }
+
+    .roadmap-content {
+
+        width: 70%;
+        margin: auto;
+    }
 
 }
 
 @media (max-width: 767px) {
     .main-hero-content {
-    padding-top: 60px;
-    padding-bottom: 80px;
-    text-align: center;
-}
+        padding-top: 60px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
 
-span.intro {
-    left: 0;
-    right: 0;
-}
+    span.intro {
+        left: 0;
+        right: 0;
+    }
 
-.boogie-content {
-    text-align: center;
-    margin-bottom: 100px;
-}
+    .boogie-content {
+        text-align: center;
+        margin-bottom: 100px;
+    }
 
-.left-eye {
-    left: 123px;
-}
+    .left-eye {
+        left: 123px;
+    }
 
-.left-eye img {
-    width: 65px !important;
-}
+    .left-eye img {
+        width: 65px !important;
+    }
 
-.right-eye {
-    right: 186px;
-}
+    .right-eye {
+        right: 186px;
+    }
 
-.child-marquee img {width: 25% !important;
-    
-}
+    .child-marquee img {
+        width: 25% !important;
 
-.marquee-section.marquee {
-    margin-bottom: 0;
-}
+    }
 
-.cta-section {
-    padding: 10rem 0 12rem;
-}
+    .marquee-section.marquee {
+        margin-bottom: 0;
+    }
 
-.copy-links {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: white;
-}
+    .cta-section {
+        padding: 10rem 0 12rem;
+    }
 
-.copy-clip {
-    background: transparent;
-    display: block;
-    text-align: center;
-    padding-top: 0;
-}
+    .copy-links {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: white;
+    }
 
-.copy-links span {
-    color: white !important;!i;!;
-}
-.stage-toggie-ces.animate .MusicPlayer2802357603__root {
-    width: 100%;
-    top: 0;
-    left: 0;
-}
+    .copy-clip {
+        background: transparent;
+        display: block;
+        text-align: center;
+        padding-top: 0;
+    }
 
-#animated-sec.in-view figure.box {
-    position: unset;
-    text-align: center;
-}
+    .copy-links span {
+        color: white !important;
+    }
 
-.what-is-boogie.who-is-boggie {
-    display: block;
-}
+    .stage-toggie-ces.animate .MusicPlayer2802357603__root {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
 
-.what-is-boogie.who-is-boggie .boogie-content h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
+    #animated-sec.in-view figure.box {
+        position: unset;
+        text-align: center;
+    }
 
-.parent-sticky figure.box img {
-    max-width: 60%;
-}
+    .what-is-boogie.who-is-boggie {
+        display: block;
+    }
 
-.custom-image-bropper {
-    width: 100%;
-}
+    .what-is-boogie.who-is-boggie .boogie-content h2 {
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
 
-.meme-generator {
-    font-size: 20px;
-}
+    .parent-sticky figure.box img {
+        max-width: 60%;
+    }
 
-.dancing-section {
-    padding-top: 2rem;
-    padding-left: 0;
-}
+    .custom-image-bropper {
+        width: 100%;
+    }
 
-.dancing-section .para {
-    color: white;
-}
+    .meme-generator {
+        font-size: 20px;
+    }
 
-#dancingVideo {
-    height: 550px;
-}
+    .dancing-section {
+        padding-top: 2rem;
+        padding-left: 0;
+    }
 
-.dancing-sec-right {height: 550px;}
+    .dancing-section .para {
+        color: white;
+    }
 
-.dancing-sec-left {
-    padding-left: 1rem;
-}
+    #dancingVideo {
+        height: 550px;
+    }
+
+    .dancing-sec-right {
+        height: 550px;
+    }
+
+    .dancing-sec-left {
+        padding-left: 1rem;
+    }
 
 
-.product-child {
-    width: 100%;
-}
+    .product-child {
+        width: 100%;
+    }
 
-.roadmap-content.chart-2\.0 {
-    width: 100%;
-    height: 400px;
-}
+    .roadmap-content.chart-2\.0 {
+        width: 100%;
+        height: 400px;
+    }
 
-.roadmap-content {
-    width: 100%;
-}
+    .roadmap-content {
+        width: 100%;
+    }
 
-.parent-ul-road-map {
-    display: block;
-}
+    .parent-ul-road-map {
+        display: block;
+    }
 
-.parent-ul-road-map ul {
-    margin-bottom: 40px;
-}
+    .parent-ul-road-map ul {
+        margin-bottom: 40px;
+    }
 
-h1.heading-2 {
-    font-size: 1.5rem;
-    padding-top: 0;
-}
+    h1.heading-2 {
+        font-size: 1.5rem;
+        padding-top: 0;
+    }
 
-.content {
-            padding-bottom: 3rem;
+    .content {
+        padding-bottom: 3rem;
         padding-top: 3rem;
-}
+    }
 
-.card.con-df {
-    height: 300px;
-    margin-bottom: 80px;
-}
+    .card.con-df {
+        height: 300px;
+        margin-bottom: 80px;
+    }
 
-section.certik p {
-    font-size: 20px   !important;
-}
+    section.certik p {
+        font-size: 20px !important;
+    }
 
-footer.section {
-    padding: 4rem 2%;
-}
+    footer.section {
+        padding: 4rem 2%;
+    }
 
-ul.footer-first-child li h6 {
-    font-size: 17px;
-}
+    ul.footer-first-child li h6 {
+        font-size: 17px;
+    }
 
-ul.footer-first-child h5 {
-    font-size: 17px;
-}
+    ul.footer-first-child h5 {
+        font-size: 17px;
+    }
 
-.bottom-footer {
-    font-size: 14px;
-}
+    .bottom-footer {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 575px) {
-   .right-eye {
-    right: 123px;
-    top: 14px;
-}
+    .right-eye {
+        right: 123px;
+        top: 14px;
+    }
 
-.left-eye {
-    left: 62px;
-} 
+    .left-eye {
+        left: 62px;
+    }
+
     .cta-content .btn.custom-btn {
-    width: 100%;
-}
+        width: 100%;
+    }
 
-.what-is-boogie.who-is-boggie .para {
-    font-size: 22px !important;
-}
+    .what-is-boogie.who-is-boggie .para {
+        font-size: 22px !important;
+    }
 
-.gallery-item .heading-2 {
-    font-size: 1.5rem;
-}
+    .gallery-item .heading-2 {
+        font-size: 1.5rem;
+    }
 
-.meme-generator {
-    font-size: 16px;
-}
+    .meme-generator {
+        font-size: 16px;
+    }
 
-.custom-image-bropper p {
-    font-size: 18px;
-}
+    .custom-image-bropper p {
+        font-size: 18px;
+    }
 
-.dancing-section .para {width: 100% !important;}
+    .dancing-section .para {
+        width: 100% !important;
+    }
 
-.roadmap-content.chart-2\.0 {
-    height: 250px;
-    
-}
+    .roadmap-content.chart-2\.0 {
+        height: 250px;
 
-.parent-marquee-2 .child-marquee.item img {
-    width: 100% !important;!;
-}
+    }
+
+    .parent-marquee-2 .child-marquee.item img {
+        width: 100% !important;
+    }
 }
