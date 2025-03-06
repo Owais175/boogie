@@ -1158,7 +1158,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4">
                             <div class="dancing-sec-left">
-                                {!! $section[21]->value !!}
+                                <h3 class="heading-3"> {!! $section[21]->value !!}</h3>
+                                
                                 {!! $section[22]->value !!}
                             </div>
                         </div>

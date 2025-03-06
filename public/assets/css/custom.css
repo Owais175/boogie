@@ -2068,7 +2068,7 @@ div#bottomtotop.show {
     transition: all ease 1s;
 }
 
-.card-content {
+section#ecosystem .card-content {
     padding: 20px;
     overflow: hidden;
     position: relative;
