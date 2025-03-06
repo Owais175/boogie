@@ -347,6 +347,19 @@
     .cta-section {
         padding: 10rem 0 12rem;
     }
+    section.certik p {
+        margin-top: -75px;
+    }
+    .car-drive {
+        bottom: -205px;
+    }
+    section.certik {
+    padding-top: 10rem;
+}
+
+.video-mian img {
+    width: 80%;
+}
 
 }
 

@@ -45,9 +45,11 @@
             <div class="col-lg-4 col-md-4 col-4">
                 <ul class="footer-first-child footer-second-child">
                     <li>
+                        <a href="#ecosystem">
                         <h5>
                             Ecosystem
                         </h5>
+                    </a>
                     </li>
                     <li>
                         <h6>

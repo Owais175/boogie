@@ -1063,12 +1063,12 @@
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <form action="{{ route('gallery_images') }}" method="POST" enctype="multipart/form-data"
+                            {{-- <form action="{{ route('gallery_images') }}" method="POST" enctype="multipart/form-data"
                                 hidden>
                                 @csrf
                                 <button type="submit" class="btn custom-btn">submit</button>
 
-                            </form>
+                            </form> --}}
 
                             {{-- <div class="filepond--drop-label" style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
                                 <label for="filepond--browser-d56l960oa" id="filepond--drop-label-d56l960oa">Drag &amp;
@@ -1078,20 +1078,20 @@
 
                             {{-- <div class="custom-image-bropper">
                                 <form action="{{ route('gallery_images') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="filepond--drop-label">
-                            <label for="uploadImage">Drag & Drop Your Files Or
-                                <span class="filepond--label-action" tabindex="0">Browse</span>
-                            </label>
-                            <div id="imagePreview" style="margin-top: 10px"></div>
-                        </div>
-                        <input type="file" hidden accept="image/png, image/jpeg, image/gif" class="filepond visually-hidden"
-                            id="uploadImage" name="images[]" multiple data-max-file-size="50MB" data-max-files="5" />
-                        <button type="submit" class="btn custom-btn my-2">Submit</button>
-                        </form>
-                    </div> --}}
+                            @csrf
+                            <div class="filepond--drop-label">
+                                <label for="uploadImage">Drag & Drop Your Files Or
+                                    <span class="filepond--label-action" tabindex="0">Browse</span>
+                                </label>
+                                <div id="imagePreview" style="margin-top: 10px"></div>
+                            </div>
+                            <input type="file" hidden accept="image/png, image/jpeg, image/gif" class="filepond visually-hidden"
+                                id="uploadImage" name="images[]" multiple data-max-file-size="50MB" data-max-files="5" />
+                            <button type="submit" class="btn custom-btn my-2">Submit</button>
+                            </form>
+                            </div> --}}
 
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <div class="custom-image-bropper" style="cursor: pointer">
                                     <form action="{{ route('gallery_images') }}" method="POST"
                                         enctype="multipart/form-data" id="img_push">
@@ -1143,7 +1143,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -1265,7 +1265,7 @@
         </div>
 
         <div class="section" id="imgunset">
-            <section class="ecosystem">
+            <section class="ecosystem" id="ecosystem">
                 <div class="container-fluid">
                     <div class="content">
                         <h1 class="heading-2"> {!! $section[8]->value !!}</h1>
@@ -1396,12 +1396,12 @@ alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="car-drive">
-                            <video id="dancingVideo" src="{{ asset('assets/images/car.mp4') }}" playsinline
-                                preload="auto" muted loop tabindex="-1" autoplay>
-                            </video>
-                        </div>
                     </div>
+                </div>
+                <div class="car-drive">
+                    <video id="dancingVideo" src="{{ asset('assets/images/02.mp4') }}" playsinline
+                        preload="auto" muted loop tabindex="-1" autoplay>
+                    </video>
                 </div>
             </section>
         </div>

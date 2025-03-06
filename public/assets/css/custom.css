@@ -1482,9 +1482,12 @@ figure.box {
 }
 
 section.certik {
-    background: linear-gradient(180deg, rgb(32 123 239), transparent);
+    /* background: linear-gradient(180deg, rgb(32 123 239), transparent); */
+    background: #207bef;
     padding-top: 10rem;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
+    position: relative;
+    z-index: 0;
 }
 
 section.certik p {
@@ -1492,6 +1495,7 @@ section.certik p {
     font-size: 27px;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    margin-top: -180px;
 }
 
 
@@ -2046,8 +2050,8 @@ div#bottomtotop.show {
 .car-drive {
     position: absolute;
     z-index: -1;
-    width: 100%;
-    top: -77px;
+    /* width: 100%; */
+    top: 0;
     left: 0;
 }
 
