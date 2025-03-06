@@ -12,21 +12,21 @@
                     </li>
                     <li>
                         <h6>
-                            <a href="javascript:;">
+                            <a href="#about">
                                 Memes
                             </a>
                         </h6>
                     </li>
                     <li>
                         <h6>
-                            <a href="javascript:;">
+                            <a href="#tokenomics">
                                 Tokenomics
                             </a>
                         </h6>
                     </li>
                     <li>
                         <h6>
-                            <a href="javascript:;">
+                            <a href="#roadmap">
                                 RoadMap
                             </a>
                         </h6>
