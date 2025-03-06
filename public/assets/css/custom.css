@@ -2068,7 +2068,7 @@ div#bottomtotop.show {
     transition: all ease 1s;
 }
 
-.col-4.card-content {
+.card-content {
     padding: 20px;
     overflow: hidden;
     position: relative;

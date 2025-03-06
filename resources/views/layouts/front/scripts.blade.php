@@ -342,7 +342,7 @@
                 items: 4
             },
             1199: {
-                items: 7
+                items: 6
             },
             1440: {
                 items: 7

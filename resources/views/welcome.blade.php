@@ -1271,13 +1271,13 @@
                         <h1 class="heading-2"> {!! $section[8]->value !!}</h1>
                     </div>
                     <div class="row">
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[9]->value !!}
                         </div>
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[10]->value !!}
                         </div>
-                        <div class="col-4 card-content">
+                        <div class="col-lg-4 col-md-4 col-12 card-content">
                             {!! $section[11]->value !!}
                         </div>
                     </div>
@@ -1383,12 +1383,12 @@ alt="">
                 <div class="container">
                     <div class="video-mian">
                         <div class="row align-items-start justify-content-center">
-                            <div class="col-lg-4 col-12">
+                            <div class="col-lg-4 col-4">
                                 <figure>
                                     <img src="{!! $section[14]->value !!}" class="img-fluid" alt="">
                                 </figure>
                             </div>
-                            <div class="col-xxl-6 col-xl-5 col-lg-4 col-md-5 col-12">
+                            <div class="col-xxl-6 col-xl-5 col-lg-4 col-md-5 col-5">
                                 <div class="parent-last-video">
                                     <p class="certik-right">
                                         {!! $section[12]->value !!}

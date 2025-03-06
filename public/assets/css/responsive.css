@@ -184,8 +184,8 @@
         margin: 0;
         font-size: 29px;
         width: 100%;
-        border-top: 3px solid black;
-        border-bottom: 3px solid black;
+        /*border-top: 3px solid black;*/
+        /*border-bottom: 3px solid black;*/
         font-family: sriracha, cursive;
         background: rgba(32, 123, 239);
         text-align: center;
@@ -385,7 +385,8 @@
     }
 
     .left-eye img {
-        width: 65px !important;
+        width: 70px !important;
+        height: 70px;
     }
 
     .right-eye {
@@ -536,12 +537,13 @@
 
 @media (max-width: 575px) {
     .right-eye {
-        right: 123px;
-        top: 14px;
+        right: 117px;
+        top: 34px;
     }
 
     .left-eye {
-        left: 62px;
+        left: 58px;
+        top: 35px;
     }
 
     .cta-content .btn.custom-btn {
@@ -576,4 +578,61 @@
     .parent-marquee-2 .child-marquee.item img {
         width: 100% !important;
     }
+    
+    .boogie-content p.para {
+    width: 75%;
+    font-size: 19px;
+    margin: auto;
+}
+
+section.what-is-boogie {
+    margin: 0;
+}
+
+
+.boogie-content h2 {
+    font-size: 20px;
+}
+.right-eye img {
+    width: 75px !important;
+    height: 70px;
+}
+div#target-section .stage-boggie img {max-width: 400px;}
+
+
+.product-child {
+    padding: 12px 20px;
+}
+
+.card.con-df {
+    position: unset;
+}
+
+section.certik {
+    padding-top: 0;
+}
+
+.logos-new {
+    padding: 0;
+}
+
+
+.car-drive {
+    position: unset;
+}
+
+section.certik p {
+    font-size: 12px !important;
+}
+    .card.con-df {
+    transform: skew(0deg, 0deg);
+}
+video#dancingVideo {
+    height: unset;
+    margin-top: 40px;
+}
+
+section.ecosystem {
+    padding: 6rem 2rem 0rem;
+}
 }
