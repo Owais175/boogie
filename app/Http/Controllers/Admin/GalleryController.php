@@ -30,7 +30,7 @@ class GalleryController extends Controller
         $model = str_slug('gallery', '-');
         if (auth()->user()->permissions()->where('name', '=', 'view-' . $model)->first() != null) {
             $keyword = $request->get('search');
-            $perPage = 25;
+            $perPage = 100;
 
             if (!empty($keyword)) {
                 $gallery = gallery::where('Image', 'LIKE', "%$keyword%")

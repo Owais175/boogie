@@ -13,7 +13,7 @@
                     <li>
                         <h6>
                             <a href="javascript:;">
-                                About
+                                Memes
                             </a>
                         </h6>
                     </li>
@@ -96,13 +96,13 @@
                             </a>
                         </h6>
                     </li>
-                    <li>
+                    {{-- <li>
                         <h6>
                             <a href="{{route('home')}}">
                                  <img src="{{ asset('assets/images/boogie-logo.png') }}" class="img-fluid" alt="">
                             </a>
                         </h6>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
             <div class="col-lg-12">
