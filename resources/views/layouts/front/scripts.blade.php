@@ -322,7 +322,7 @@
         center: true,
         items: 6,
         loop: true,
-        margin: 50,
+        margin: 10,
         nav: false,
         dots: false,
         // autoWidth: true,
@@ -342,10 +342,10 @@
                 items: 4
             },
             1199: {
-                items: 5
+                items: 7
             },
             1440: {
-                items: 6
+                items: 7
             }
         }
     });
