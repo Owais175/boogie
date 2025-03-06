@@ -14,38 +14,63 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
+
+
 <script>
-    
+    $(document).ready(function() {
+        var targetSection = $('#imgunset');
+        var added = false;
+
+        $(window).scroll(function() {
+            var scrollPos = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var sectionTop = targetSection.offset().top;
+            var sectionBottom = sectionTop + targetSection.outerHeight();
+
+            if (scrollPos + windowHeight >= sectionBottom && !added) {
+                targetSection.addClass('active');
+                added = true;
+                console.log('Class added');
+            } else if (scrollPos + windowHeight < sectionBottom && added) {
+                targetSection.removeClass('active');
+                added = false;
+                console.log('Class added');
+            }
+        });
+    });
+</script>
+
+<script>
     var btn = $('#bottomtotop');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 500) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 500) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '500');
-});
-
-
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '500');
+    });
 </script>
 <script>
-        function formpush() {
-        document.getElementById('img_push').submit(); 
+    function formpush() {
+        document.getElementById('img_push').submit();
     }
 </script>
 
 <script>
     document.getElementById('uploadImage').addEventListener('change', function(event) {
         let previewContainer = document.getElementById('imagePreview');
-        previewContainer.innerHTML = ""; 
+        previewContainer.innerHTML = "";
 
-        let files = Array.from(event.target.files); 
-        let dataTransfer = new DataTransfer(); 
+        let files = Array.from(event.target.files);
+        let dataTransfer = new DataTransfer();
 
         files.forEach((file, index) => {
             let reader = new FileReader();
@@ -78,8 +103,8 @@ btn.on('click', function(e) {
                 removeBtn.style.fontSize = "12px";
 
                 removeBtn.addEventListener("click", function() {
-                    previewDiv.remove(); 
-                    files.splice(index, 1); 
+                    previewDiv.remove();
+                    files.splice(index, 1);
                     dataTransfer.items.clear();
                     files.forEach(f => dataTransfer.items.add(f));
                     document.getElementById('uploadImage').files = dataTransfer
@@ -91,10 +116,10 @@ btn.on('click', function(e) {
                 previewContainer.appendChild(previewDiv);
             };
             reader.readAsDataURL(file);
-            dataTransfer.items.add(file); 
+            dataTransfer.items.add(file);
         });
 
-        document.getElementById('uploadImage').files = dataTransfer.files; 
+        document.getElementById('uploadImage').files = dataTransfer.files;
     });
 </script>
 <script>
@@ -188,7 +213,6 @@ btn.on('click', function(e) {
         link.href = tempCanvas.toDataURL();
         link.click();
     }
-
 </script>
 
 <script>

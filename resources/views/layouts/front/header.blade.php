@@ -4,7 +4,7 @@
 <section class="boogie-hero-section">
     <div class="bottom-header">
         <header>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
@@ -24,7 +24,7 @@
                                                 class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link scroll-btn" href="#about">About</a>
+                                        <a class="nav-link scroll-btn" href="#about">Memes</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link scroll-btn" href="#tokenomics">Tokenomics</a>
@@ -38,11 +38,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="javascript:;">Pinksale</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link scroll-btn"
                                             href="images/Boogie Whitepaper RT - Copy_0_]1737173250.pdf"
                                             target="_blank">White Paper</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item scroll-btn">
                                         <a class="nav-link buy-btn scroll-btn" href="#buy">Buy</a>
                                     </li>
