@@ -1210,8 +1210,8 @@ button:focus {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: auto;
+    width: 300px !important;!i;!;
+    height: 300px !important;!i;!;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -1219,11 +1219,13 @@ button:focus {
 
 .swiper-slide img {
     display: block;
-    width: 100%;
+    !t;!i;!;
     border-radius: 6px;
-    border: 2px solid #ffffff;
-    width: 100%;
-    max-height: 300px;
+    /* border: 2px solid #ffffff; */
+    /* width: 300px; */
+    /* max-height: fit-content; */
+    object-fit: contain;
+    height: 260px;
 }
 
 .swiper-3d {
@@ -1271,8 +1273,8 @@ button:focus {
     /* object-fit: contain; */
 }
 
-.swiper-slide-next {
-    transform: scale(1.5) translate3d(50px, 0px, 10.3604px) !important;
+.swiper-slide-active {
+    transform: scale(1.5) translate3d(0px, 0px, 54.3604px) !important;
 }
 
 /* slider css  */
@@ -2082,3 +2084,11 @@ section#ecosystem .card-content {
     top: 0;
     transition: all ease 1s;
 }
+
+/* admin css */
+
+body.vertical-layout.vertical-menu-modern.menu-expanded .navbar .navbar-header {
+    overflow: hidden;
+}
+
+/* admin css */

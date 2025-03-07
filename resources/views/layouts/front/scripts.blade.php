@@ -241,24 +241,24 @@
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
-        centeredSlides: false,
+        centeredSlides: true,
         loop: true,
-        slidesPerView: 4,
-        spaceBetween: 0,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
         freeMode: false,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: true,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        // },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         coverflowEffect: {
-            rotate: 50,
+            rotate: 0,
             stretch: 0,
             depth: 100,
-            modifier: 2,
+            modifier: 0,
             slideShadows: true,
         },
         // pagination: {
