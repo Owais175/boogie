@@ -24,7 +24,7 @@
                                                     class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link scroll-btn" href="#about">Memes</a>
+                                            <a class="nav-link scroll-btn" href="#meme">Memes</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link scroll-btn" href="#tokenomics">Tokenomics</a>

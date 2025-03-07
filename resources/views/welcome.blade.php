@@ -859,7 +859,7 @@
 
 
         <div class="section">
-            <section class="gallery-item">
+            <section class="gallery-item" id="meme">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -992,7 +992,6 @@
                         <div class="col-lg-4">
                             <div class="dancing-sec-left">
                                 <h3 class="heading-3"> {!! $section[21]->value !!}</h3>
-                                
                                 {!! $section[22]->value !!}
                             </div>
                         </div>
