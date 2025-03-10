@@ -366,7 +366,7 @@
 
     
 
-.winks-gifs {left: 0;bottom: 0;}
+.winks-gifs {left: 0;bottom: -400px;}
 }
 
 @media (max-width: 767px) {
@@ -648,4 +648,7 @@
     section.ecosystem {
         padding: 6rem 2rem 0rem;
     }
+
+    
+.winks-gifs {left: 0;bottom: 0px;}
 }
