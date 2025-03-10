@@ -924,7 +924,7 @@
                             </form>
                             </div> --}}
 
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <div class="custom-image-bropper" style="cursor: pointer">
                                     <form action="{{ route('gallery_images') }}" method="POST"
                                         enctype="multipart/form-data" id="img_push">
@@ -976,7 +976,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
