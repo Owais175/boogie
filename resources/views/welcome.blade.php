@@ -1215,13 +1215,15 @@ alt="">
             <section class="certik">
                 <div class="container">
                     <div class="video-mian">
+                        <div class="winks-gifs">
+                            <figure>
+                                <img src="{!! $section[14]->value !!}" class="img-fluid" alt="">
+                            </figure>
+                        </div>
                         <div class="row align-items-start justify-content-center">
-                            <div class="col-lg-4 col-4">
-                                <figure>
-                                    <img src="{!! $section[14]->value !!}" class="img-fluid" alt="">
-                                </figure>
+                            <div class="col-lg-7 col-6">
                             </div>
-                            <div class="col-xxl-6 col-xl-5 col-lg-4 col-md-5 col-5">
+                            <div class="col-lg-5 col-md-5 col-6">
                                 <div class="parent-last-video">
                                     <p class="certik-right">
                                         {!! $section[12]->value !!}
@@ -1232,8 +1234,8 @@ alt="">
                     </div>
                 </div>
                 <div class="car-drive">
-                    <video id="dancingVideo" src="{{ asset('assets/images/02.mp4') }}" playsinline
-                        preload="auto" muted loop tabindex="-1" autoplay>
+                    <video id="dancingVideo" src="{{ asset('assets/images/02.mp4') }}" playsinline preload="auto" muted
+                        loop tabindex="-1" autoplay>
                     </video>
                 </div>
             </section>

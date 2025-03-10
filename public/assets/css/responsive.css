@@ -347,20 +347,26 @@
     .cta-section {
         padding: 10rem 0 12rem;
     }
+
     section.certik p {
-        margin-top: -75px;
+        margin-top: -135px;
     }
+
     .car-drive {
-        bottom: -205px;
+        bottom: 0;
     }
+
     section.certik {
-    padding-top: 10rem;
-}
+        padding-top: 10rem;
+    }
 
-.video-mian img {
-    width: 80%;
-}
+    .video-mian img {
+        width: 70% !important;
+    }
 
+    
+
+.winks-gifs {left: 0;bottom: 0;}
 }
 
 @media (max-width: 767px) {
@@ -578,61 +584,68 @@
     .parent-marquee-2 .child-marquee.item img {
         width: 100% !important;
     }
-    
+
     .boogie-content p.para {
-    width: 75%;
-    font-size: 19px;
-    margin: auto;
-}
+        width: 75%;
+        font-size: 19px;
+        margin: auto;
+    }
 
-section.what-is-boogie {
-    margin: 0;
-}
-
-
-.boogie-content h2 {
-    font-size: 20px;
-}
-.right-eye img {
-    width: 75px !important;
-    height: 70px;
-}
-div#target-section .stage-boggie img {max-width: 400px;}
+    section.what-is-boogie {
+        margin: 0;
+    }
 
 
-.product-child {
-    padding: 12px 20px;
-}
+    .boogie-content h2 {
+        font-size: 20px;
+    }
 
-.card.con-df {
-    position: unset;
-}
+    .right-eye img {
+        width: 75px !important;
+        height: 70px;
+    }
 
-section.certik {
-    padding-top: 0;
-}
-
-.logos-new {
-    padding: 0;
-}
+    div#target-section .stage-boggie img {
+        max-width: 400px;
+    }
 
 
-.car-drive {
-    position: unset;
-}
+    .product-child {
+        padding: 12px 20px;
+    }
 
-section.certik p {
-    font-size: 12px !important;
-}
     .card.con-df {
-    transform: skew(0deg, 0deg);
-}
-video#dancingVideo {
-    height: unset;
-    margin-top: 40px;
-}
+        position: unset;
+    }
 
-section.ecosystem {
-    padding: 6rem 2rem 0rem;
-}
+    section.certik {
+        padding-top: 15rem;
+        padding-bottom: 0;
+    }
+
+    .logos-new {
+        padding: 0;
+    }
+
+
+    .car-drive {
+        position: unset;
+    }
+
+    section.certik p {
+        font-size: 12px !important;
+    }
+
+    .card.con-df {
+        transform: skew(0deg, 0deg);
+    }
+
+    video#dancingVideo {
+        height: unset;
+        margin-top: 0;
+    }
+
+    section.ecosystem {
+        padding: 6rem 2rem 0rem;
+    }
 }

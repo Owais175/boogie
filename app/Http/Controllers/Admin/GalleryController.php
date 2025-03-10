@@ -27,8 +27,7 @@ class GalleryController extends Controller
 
     public function index(Request $request)
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'view-' . $model)->first() != null) {
+
             $keyword = $request->get('search');
             $perPage = 100;
 
@@ -40,8 +39,7 @@ class GalleryController extends Controller
             }
 
             return view('gallery.gallery.index', compact('gallery'));
-        }
-        return response(view('403'), 403);
+
     }
 
     /**
@@ -51,11 +49,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'add-' . $model)->first() != null) {
             return view('gallery.gallery.create');
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -67,8 +61,6 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'add-' . $model)->first() != null) {
 
 
             $gallery = new gallery($request->all());
@@ -89,8 +81,6 @@ class GalleryController extends Controller
 
             $gallery->save();
             return redirect()->back()->with('message', 'gallery added!');
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -102,12 +92,8 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'view-' . $model)->first() != null) {
             $gallery = gallery::findOrFail($id);
             return view('gallery.gallery.show', compact('gallery'));
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -142,8 +128,6 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'edit-' . $model)->first() != null) {
 
             $requestData = $request->all();
 
@@ -173,8 +157,6 @@ class GalleryController extends Controller
             $gallery = gallery::findOrFail($id);
             $gallery->update($requestData);
             return redirect()->back()->with('message', 'gallery updated!');
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -186,11 +168,7 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        $model = str_slug('gallery', '-');
-        if (auth()->user()->permissions()->where('name', '=', 'delete-' . $model)->first() != null) {
             gallery::destroy($id);
             return redirect()->back()->with('message', 'gallery deleted!');
-        }
-        return response(view('403'), 403);
     }
 }

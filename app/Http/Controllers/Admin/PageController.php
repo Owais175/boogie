@@ -30,8 +30,6 @@ class PageController extends Controller
 
     public function index(Request $request)
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','view-'.$model)->first()!= null) {
             $keyword = $request->get('search');
             $perPage = 25;
 
@@ -46,8 +44,6 @@ class PageController extends Controller
             }
 
             return view('admin.page.index', compact('page'));
-        }
-        return response(view('403'), 403);
 
     }
 
@@ -58,12 +54,8 @@ class PageController extends Controller
      */
     public function create()
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','add-'.$model)->first()!= null) {
             return view('admin.page.create');
-        }
-        return response(view('403'), 403);
-
+        
     }
 
     /**
@@ -75,8 +67,6 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','add-'.$model)->first()!= null) {
             $this->validate($request, [
 			'page_name' => 'required',
 			'name' => 'required',
@@ -99,8 +89,6 @@ class PageController extends Controller
 			}
             $page->save();
             return redirect('admin/page')->with('flash_message', 'Page added!');
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -112,12 +100,8 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','view-'.$model)->first()!= null) {
             $page = Page::findOrFail($id);
             return view('admin.page.show', compact('page'));
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -129,12 +113,8 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','edit-'.$model)->first()!= null) {
             $page = Page::findOrFail($id);
             return view('admin.page.edit', compact('page'));
-        }
-        return response(view('403'), 403);
     }
 
     /**
@@ -224,8 +204,6 @@ class PageController extends Controller
 
         }
 
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','edit-'.$model)->first()!= null) {
             $this->validate($request, [
 	 	 	 'page_name' => 'required',
 	 	 	 'name' => 'required',
@@ -260,8 +238,6 @@ class PageController extends Controller
             $page = Page::findOrFail($id);
             $page->update($requestData);
             return redirect()->back()->with('message', 'Page updated!');
-        }
-        return response(view('403'), 403);
 
     }
 
@@ -274,13 +250,9 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        $model = str_slug('page','-');
-        if(auth()->user()->permissions()->where('name','=','delete-'.$model)->first()!= null) {
             Page::destroy($id);
 
             return redirect('admin/page')->with('flash_message', 'Page deleted!');
-        }
-        return response(view('403'), 403);
 
     }
 }
