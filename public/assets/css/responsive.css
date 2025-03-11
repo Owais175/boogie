@@ -326,22 +326,26 @@
     }
 
     .product-child {
-        width: 65%;
+        width: 60%;
         margin: auto;
-        margin-bottom: 45px;
+        margin-bottom: 31px;
     }
 
     .roadmap-content.chart-2\.0 {
-        height: 600px;
-        width: 70%;
+        height: 550px;
+        width: 60%;
         margin: auto;
         margin-bottom: 50px;
     }
 
     .roadmap-content {
 
-        width: 70%;
+        width: 60%;
+
         margin: auto;
+
+        padding: 1rem 2rem 1rem;
+
     }
 
     .cta-section {
@@ -689,9 +693,15 @@
         margin: 0 !important;
     }
 
-    
-.winks-gifs {left: 0;bottom: 0px;}
 
-    .winks-gifs {left: 0;bottom: 0px;}
+    .winks-gifs {
+        left: 0;
+        bottom: 0px;
+    }
+
+    .winks-gifs {
+        left: 0;
+        bottom: 0px;
+    }
 
 }
