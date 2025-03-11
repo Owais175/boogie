@@ -375,7 +375,9 @@
                         </div>
                         <div class="products-list">
                             <span>
+                                 <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
                                 <img src="{!! $section[17]->value !!}" class="img-fluid" alt="">
+                                  </a> 
                             </span>
                             <span>
                                 <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
@@ -383,10 +385,14 @@
                             </a>    
                             </span>
                             <span>
+                                    <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
                                 <img src="{!! $section[19]->value !!}" class="img-fluid" alt="">
+                                 </a> 
                             </span>
                             <span>
+                                    <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
                                 <img src="{!! $section[20]->value !!}" class="img-fluid" alt="">
+                                 </a> 
                             </span>
                         </div>
                         <div class="heading-copy-clip">
@@ -523,7 +529,7 @@
                 </div>
 
                 <!-- Audio Element -->
-                <audio id="audio" src="{{ asset('assets/images/the-trammps-disco-inferno-croped.mp3') }}"></audio>
+                <audio id="audio" src="{{ asset('assets/images/17-The-Trammps-Disco-Inferno_0_]1740594393.mp3') }}"></audio>
 
             </section>
         </div>
@@ -1081,8 +1087,12 @@
                                         <img src="{!! $section[15]->value !!}" class="img-fluid">
                                     </div>
                                 </div>
-                                {!! $section[7]->value !!}
-                                {{-- <div class="roadmap-content" id="roadmap">
+
+                         
+
+                                <!--{!! $section[7]->value !!}-->
+                                 <div class="roadmap-content" id="roadmap">
+
                                     <h3>
                                         <img alt="" class="img-fluid" src="assets/images/roadmap.png" /> Roadmap
                                     </h3>
@@ -1120,7 +1130,11 @@
                                                 Partnerships</li>
                                         </ul>
                                     </div>
-                                </div> --}}
+
+                                </div> 
+
+                            
+
                             </div>
                         </div>
                     </div>

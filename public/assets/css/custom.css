@@ -809,7 +809,9 @@ body.fp-viewing-3rdPage #section3 p {
     font-family: 'Helvetica';
     margin-top: 4rem;
     font-size: 16px;
+
     font-weight: 300 !important;
+
 }
 
 ul.footer-first-child.footer-second-child h6 {
@@ -2102,6 +2104,7 @@ section#ecosystem .card-content {
 }
 
 
+
 .footer-second-child {
     padding-left: 200px !important;
 
@@ -2118,9 +2121,18 @@ section#ecosystem .card-content {
 .boogie_bot {
     margin-top: 30px;
 }
+.footer-second-child {
+    padding-left: 200px !important;
 
-.boogie_bot img {
-    margin-bottom: -10px;
+}
+
+.footer-third-child {
+    padding-left: 60px !important;
+
+}
+
+.footer-second-child li a {
+    font-weight: 300 !important;
 }
 /* admin css */
 
