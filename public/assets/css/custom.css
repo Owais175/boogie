@@ -152,6 +152,10 @@ header a.nav-link {
     /* animation: marquee 6s linear infinite; */
 }
 
+li.nav-item.scroll-btn {
+    margin-top: -5px;
+}
+
 figure {
     margin: 0;
 }
@@ -1392,7 +1396,7 @@ button.scroll-btn {
 
 .marquee-section.who-changes .child-marquee img {
     height: 100%;
-    width: 100%;
+    width: unset;
     /* max-width: 740px !important; */
     /* object-fit: cover; */
 }
@@ -2119,9 +2123,11 @@ section#ecosystem .card-content {
 .footer-second-child li a {
     font-weight: 300 !important;
 }
+
 .boogie_bot {
     margin-top: 30px;
 }
+
 .footer-second-child {
     padding-left: 200px !important;
 
@@ -2135,6 +2141,25 @@ section#ecosystem .card-content {
 .footer-second-child li a {
     font-weight: 300 !important;
 }
+
+.checkedimg {
+    display: none;
+}
+
+.checkedimg span.copied-img img {
+    width: 44px;
+    background: transparent;
+    border: none;
+    filter: invert(1);
+}
+
+.checkedimg .copy-btn.btn-success {
+    background: #28a745;
+    border-color: #28a745;
+    padding: 0 10px;
+    padding-left: 0;
+}
+
 /* admin css */
 
 body.vertical-layout.vertical-menu-modern.menu-expanded .navbar .navbar-header {

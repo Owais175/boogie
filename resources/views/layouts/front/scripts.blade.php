@@ -328,8 +328,8 @@
         // autoWidth: true,
         autoplay: true,
         slideTransition: 'linear',
-        autoplayTimeout: 3000,
-        autoplaySpeed: 3000,
+        autoplayTimeout: 1500,
+        autoplaySpeed: 1500,
         autoplayHoverPause: true,
         responsive: {
             0: {
@@ -391,6 +391,10 @@
         tempInput.select();
         document.execCommand("copy");
         document.body.removeChild(tempInput);
+        $(document).ready(function() {
+            $('.checkimg').css('display', 'none');
+            $('.checkedimg').css('display', 'block');
+        });
     }
 </script>
 <script>

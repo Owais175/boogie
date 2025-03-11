@@ -36,7 +36,7 @@
                                             <a class="nav-link scroll-btn" href="#ecosystem">Ecosystem</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="javascript:;">Pinksale</a>
+                                            <a class="nav-link" href="https://www.pinksale.finance/">Pinksale</a>
                                         </li>
                                         {{-- <li class="nav-item">
                                         <a class="nav-link scroll-btn"
