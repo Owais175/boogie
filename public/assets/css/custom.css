@@ -612,6 +612,7 @@ a.nav-link.buy-btn {
     border: 1px solid black;
     border-radius: 15px;
     padding: 3px 25px !important;
+    text-decoration: none;
 }
 
 @keyframes marquee2 {
