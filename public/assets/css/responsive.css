@@ -362,14 +362,6 @@
 
     .video-mian img {
         width: 80% !important;
-        !i;
-        !;
-        !u;
-        !;
-        !;
-        !i;
-        !;
-        !;
     }
 
 
@@ -696,4 +688,10 @@
     .winks-gifs figure img {
         margin: 0 !important;
     }
+
+    
+.winks-gifs {left: 0;bottom: 0px;}
+
+    .winks-gifs {left: 0;bottom: 0px;}
+
 }

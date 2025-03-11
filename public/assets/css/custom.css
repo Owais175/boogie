@@ -96,8 +96,6 @@ header a.nav-link {
     font-weight: 700;
     color: black !important;
     padding: 0 !important;
-    !i;
-    !;
     font-size: 17px;
     font-family: Helvetica;
 }
@@ -301,9 +299,6 @@ body {
 }
 
 .left-eye img {
-    !i;!;
-    !i;
-    !;
     height: 270px;
     object-fit: cover;
 }
@@ -317,8 +312,6 @@ body {
 
 .right-eye img {
     width: 108px !important;
-    !i;
-    !;
     height: 115px;
     object-fit: cover;
     transform: rotate(45deg);
@@ -816,7 +809,7 @@ body.fp-viewing-3rdPage #section3 p {
     font-family: 'Helvetica';
     margin-top: 4rem;
     font-size: 16px;
-    font-weight: 300 !important;!i;!;
+    font-weight: 300 !important;
 }
 
 ul.footer-first-child.footer-second-child h6 {
@@ -1215,11 +1208,9 @@ button:focus {
     background-position: center;
     background-size: cover;
     width: 300px !important;
-    !i;
-    !;
+
     height: 300px !important;
-    !i;
-    !;
+
     align-items: center;
     justify-content: center;
     display: flex;
@@ -1227,9 +1218,7 @@ button:focus {
 
 .swiper-slide img {
     display: block;
-    !t;
-    !i;
-    !;
+
     border-radius: 6px;
     /* border: 2px solid #ffffff; */
     /* width: 300px; */
@@ -2112,6 +2101,7 @@ section#ecosystem .card-content {
     margin-bottom: -1px;
 }
 
+
 .footer-second-child {
     padding-left: 200px !important;
 
@@ -2124,6 +2114,13 @@ section#ecosystem .card-content {
 
 .footer-second-child li a {
     font-weight: 300 !important;
+}
+.boogie_bot {
+    margin-top: 30px;
+}
+
+.boogie_bot img {
+    margin-bottom: -10px;
 }
 /* admin css */
 
