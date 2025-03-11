@@ -1257,6 +1257,10 @@ button:focus {
     height: 65px;
     border-radius: 16px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .products-list span img {
