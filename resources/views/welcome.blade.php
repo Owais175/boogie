@@ -375,24 +375,25 @@
                         </div>
                         <div class="products-list">
                             <span>
-                                 <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
-                                <img src="{!! $section[17]->value !!}" class="img-fluid" alt="">
-                                  </a> 
+                                <a
+                                  target="_blank"  href="https://raydium.io/swap/?inputMint=sol&outputMint=49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
+                                    <img src="{!! $section[17]->value !!}" class="img-fluid" alt="">
+                                </a>
                             </span>
                             <span>
-                                <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
-                                <img src="{!! $section[18]->value !!}" class="img-fluid" alt="">
-                            </a>    
+                                <a  target="_blank" href="https://solana.com/">
+                                    <img src="{!! $section[18]->value !!}" class="img-fluid" alt="">
+                                </a>
                             </span>
                             <span>
-                                    <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
-                                <img src="{!! $section[19]->value !!}" class="img-fluid" alt="">
-                                 </a> 
+                                <a  target="_blank" href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
+                                    <img src="{!! $section[19]->value !!}" class="img-fluid" alt="">
+                                </a>
                             </span>
                             <span>
-                                    <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
-                                <img src="{!! $section[20]->value !!}" class="img-fluid" alt="">
-                                 </a> 
+                                <a  target="_blank" href="https://www.pinksale.finance/">
+                                    <img src="{!! $section[20]->value !!}" class="img-fluid" alt="">
+                                </a>
                             </span>
                         </div>
                         <div class="heading-copy-clip">
@@ -529,7 +530,8 @@
                 </div>
 
                 <!-- Audio Element -->
-                <audio id="audio" src="{{ asset('assets/images/17-The-Trammps-Disco-Inferno_0_]1740594393.mp3') }}"></audio>
+                <audio id="audio"
+                    src="{{ asset('assets/images/17-The-Trammps-Disco-Inferno_0_]1740594393.mp3') }}"></audio>
 
             </section>
         </div>
@@ -1036,7 +1038,7 @@
 
 
         <div class="section">
-            <section class="product-list">
+            <section class="product-list" id="tokenomics">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -1079,7 +1081,7 @@
                                 <!--</div>-->
 
 
-                                <div class="roadmap-content chart-2.0" id="tokenomics">
+                                <div class="roadmap-content chart-2.0">
                                     <h3>
                                         Tokenomics
                                     </h3>
@@ -1088,10 +1090,10 @@
                                     </div>
                                 </div>
 
-                         
+
 
                                 <!--{!! $section[7]->value !!}-->
-                                 <div class="roadmap-content" id="roadmap">
+                                <div class="roadmap-content" id="roadmap">
 
                                     <h3>
                                         <img alt="" class="img-fluid" src="assets/images/roadmap.png" /> Roadmap
@@ -1131,9 +1133,9 @@
                                         </ul>
                                     </div>
 
-                                </div> 
+                                </div>
 
-                            
+
 
                             </div>
                         </div>
