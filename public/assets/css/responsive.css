@@ -332,10 +332,14 @@
     }
 
     .roadmap-content.chart-2\.0 {
-        height: 550px;
+        height: auto;
         width: 60%;
         margin: auto;
         margin-bottom: 50px;
+    }
+
+    .parent-ul-road-map img {
+        height: 330px;
     }
 
     .roadmap-content {
