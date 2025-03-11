@@ -1,5 +1,5 @@
 <footer class="section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-4">
                 <ul class="footer-first-child">
@@ -46,10 +46,10 @@
                 <ul class="footer-first-child footer-second-child">
                     <li>
                         <a href="#ecosystem">
-                        <h5>
-                            Ecosystem
-                        </h5>
-                    </a>
+                            <h5>
+                                Ecosystem
+                            </h5>
+                        </a>
                     </li>
                     <li>
                         <h6>
@@ -79,14 +79,21 @@
                             </a>
                         </h6>
                     </li>
+                    <li>
+                        <h6>
+                            <a href="javascript:;">
+                                Wallet
+                            </a>
+                        </h6>
+                    </li>
                 </ul>
             </div>
 
             <div class="col-lg-4 col-md-4 col-4">
-                <ul class="footer-first-child">
+                <ul class="footer-first-child footer-third-child">
                     <li>
                         <h6>
-                            <a href="assets/images/boogie.pdf" target="_blank">
+                            <a href="assets/images/Boogie-Whitepaper-RT.pdf" target="_blank">
                                 Whitepaper
                             </a>
                         </h6>
@@ -94,7 +101,7 @@
                     <li>
                         <h6>
                             <a href="https://www.boogie.fun/">
-                               Boogie.fun
+                                Boogie.fun
                             </a>
                         </h6>
                     </li>

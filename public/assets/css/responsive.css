@@ -349,7 +349,7 @@
     }
 
     section.certik p {
-        margin-top: -135px;
+        margin-top: -435px;
     }
 
     .car-drive {
@@ -361,12 +361,32 @@
     }
 
     .video-mian img {
-        width: 70% !important;
+        width: 80% !important;
+        !i;
+        !;
+        !u;
+        !;
+        !;
+        !i;
+        !;
+        !;
     }
 
-    
 
-.winks-gifs {left: 0;bottom: -400px;}
+
+    .winks-gifs {
+        left: 0;
+        bottom: -400px;
+    }
+
+    .footer-second-child {
+        padding-left: 100px !important;
+    }
+
+    ul.footer-first-child {
+        padding-left: 120px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -619,8 +639,8 @@
     }
 
     section.certik {
-        padding-top: 15rem;
-        padding-bottom: 0;
+        padding-top: 10rem;
+        padding-bottom: 52px;
     }
 
     .logos-new {
@@ -634,6 +654,7 @@
 
     section.certik p {
         font-size: 12px !important;
+        margin: 0;
     }
 
     .card.con-df {
@@ -649,6 +670,30 @@
         padding: 6rem 2rem 0rem;
     }
 
-    
-.winks-gifs {left: 0;bottom: 0px;}
+
+    .winks-gifs {
+        left: 0;
+        bottom: 0px;
+        margin-bottom: -107px;
+    }
+
+    ul.footer-first-child {
+        padding: 0;
+    }
+
+    .footer-second-child {
+        padding: 0 !important;
+    }
+
+    .footer-third-child {
+        padding: 0 !important;
+    }
+
+    ul.footer-first-child li a {
+        font-size: 15px;
+    }
+
+    .winks-gifs figure img {
+        margin: 0 !important;
+    }
 }

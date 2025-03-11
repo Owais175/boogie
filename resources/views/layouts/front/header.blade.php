@@ -44,7 +44,7 @@
                                             target="_blank">White Paper</a>
                                     </li> --}}
                                         <li class="nav-item scroll-btn">
-                                            <a class="nav-link buy-btn scroll-btn" href="#buy">Buy</a>
+                                            <a class="nav-link buy-btn scroll-btn" href="https://jup.ag/swap/49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S-SOL">Buy</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -10,12 +10,12 @@
             <div class="col-lg-12">
                 <div class="social-links">
                     <span>
-                        <a href="javascript:;">
+                        <a href="https://x.com/Boogietoken">
                             <img src="{{ asset('assets/images/twitter.avif') }}" class="img-fluid" alt="">
                         </a>
                     </span>
                     <span>
-                        <a href="javascript:;">
+                        <a href="https://t.me/Boogieofficialgroup">
                             <img src="{{ asset('assets/images/telegram_edited_edited.png') }}" class="img-fluid"
                                 alt="">
                         </a>
@@ -53,13 +53,15 @@
                 <div class="col-lg-6">
                     <div class="boogie-img">
                         <div class="left-eye">
-                            <img src="{!! $section[23]->value !!}" class="img-fluid">
+                            {{-- <img src="{!! $section[23]->value !!}" class="img-fluid"> --}}
+                            <img src="{{ asset('assets/images/b8489a_cde2db31d92d4d7d8cb37fccf7675dd9~mv2.gif') }}"
+                                class="img-fluid">
                         </div>
                         <figure>
                             <img src="{!! $page->image !!}" class="img-fluid" alt="">
                         </figure>
                         <div class="right-eye">
-                            <img src="{!! $section[23]->value !!}" class="img-fluid">
+                            {{-- <img src="{!! $section[23]-/>value !!}" class="img-fluid"> --}}
                         </div>
                     </div>
                 </div>
@@ -368,14 +370,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="cta-content">
-                            <button class="btn custom-btn">BUY</button>
+                            <a href="https://jup.ag/swap/49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S-SOL"
+                                class="btn custom-btn">BUY</a>
                         </div>
                         <div class="products-list">
                             <span>
                                 <img src="{!! $section[17]->value !!}" class="img-fluid" alt="">
                             </span>
                             <span>
+                                <a href="https://jup.ag/swap/SOL-49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S">
                                 <img src="{!! $section[18]->value !!}" class="img-fluid" alt="">
+                            </a>    
                             </span>
                             <span>
                                 <img src="{!! $section[19]->value !!}" class="img-fluid" alt="">
@@ -1077,7 +1082,45 @@
                                     </div>
                                 </div>
                                 {!! $section[7]->value !!}
-
+                                {{-- <div class="roadmap-content" id="roadmap">
+                                    <h3>
+                                        <img alt="" class="img-fluid" src="assets/images/roadmap.png" /> Roadmap
+                                    </h3>
+                                    <div class="parent-ul-road-map">
+                                        <ul>
+                                            <h4>Q2 2025</h4>
+                                            <li><span></span>
+                                                Community Buiding</li>
+                                            <li><span></span>
+                                                Pink Sale</li>
+                                            <li><span></span>
+                                                Influencer Onboarding</li>
+                                            <li><span></span>
+                                                Token Creation & Launch</li>
+                                            <li><span></span>
+                                                Dex Listings</li>
+                                            <li class="last">
+                                                <span></span>
+                                                Marketing & Trending Campaign
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h4>Q3 2025</h4>
+                                            <li><span></span>
+                                                Coin Market Cap / Coin Ghecko</li>
+                                            <li><span></span>
+                                                Cex Listings</li>
+                                            <li><span></span>
+                                                Ecosystem Integration</li>
+                                            <li><span></span>
+                                                Certik Audit</li>
+                                            <li class="last"><span></span>
+                                                Top 10 Cex Listings</li>
+                                            <li><span></span>
+                                                Partnerships</li>
+                                        </ul>
+                                    </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -1221,9 +1264,10 @@ alt="">
                             </figure>
                         </div>
                         <div class="row align-items-start justify-content-center">
-                            <div class="col-lg-7 col-6">
+                            <div class="col-lg-6 col-6">
+
                             </div>
-                            <div class="col-lg-5 col-md-5 col-6">
+                            <div class="col-lg-6 col-md-6 col-6">
                                 <div class="parent-last-video">
                                     <p class="certik-right">
                                         {!! $section[12]->value !!}
@@ -1233,11 +1277,11 @@ alt="">
                         </div>
                     </div>
                 </div>
-                <div class="car-drive">
+                {{-- <div class="car-drive">
                     <video id="dancingVideo" src="{{ asset('assets/images/02.mp4') }}" playsinline preload="auto" muted
                         loop tabindex="-1" autoplay>
                     </video>
-                </div>
+                </div> --}}
             </section>
         </div>
 

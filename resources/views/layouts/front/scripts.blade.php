@@ -300,8 +300,8 @@
         dots: false,
         autoplay: true,
         slideTransition: 'linear',
-        autoplayTimeout: 3000,
-        autoplaySpeed: 3000,
+        autoplayTimeout: 1500,
+        autoplaySpeed: 1500,
         autoplayHoverPause: true,
         responsive: {
             0: {
