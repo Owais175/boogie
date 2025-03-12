@@ -1295,7 +1295,7 @@ div#main-parent {
     display: none;
 }
 
-ul.navbar-nav.mr-auto {
+header .navbar-nav.mr-auto {
     margin-right: 0px !important;
     margin-bottom: 0;
     margin-left: 100px;
