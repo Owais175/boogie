@@ -608,7 +608,9 @@
     }
 
     .cta-content .btn.custom-btn {
-        width: 100%;
+        width: 60%;
+        height: 45px;
+        font-size: 1.3rem;
     }
 
     .what-is-boogie.who-is-boggie .para {
@@ -793,14 +795,21 @@
     .parent-ul-road-map ul li {
         font-size: 15px;
     }
+
     .con-p {
         font-size: 15px;
     }
+
     .gallery-item-parent ul li {
         width: 100%;
     }
-    
+
     .gallery-item-parent .item img {
         width: 70% !important;
+    }
+
+    span.shadow-light {
+        right: -250px;
+        left: unset;
     }
 }
