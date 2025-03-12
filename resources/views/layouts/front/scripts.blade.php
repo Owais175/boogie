@@ -333,10 +333,14 @@
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 2
+                items: 2,
+                center: false,
+                autoWidth: false,
             },
             600: {
-                items: 3
+                items: 2,
+                center: false,
+                autoWidth: false,
             },
             1000: {
                 items: 4
@@ -352,7 +356,7 @@
 
     jQuery('.parent-marquee-3').owlCarousel({
         center: true,
-        items: 8,
+        items: 6,
         loop: true,
         margin: 0,
         nav: false,
@@ -367,7 +371,7 @@
                 items: 2
             },
             600: {
-                items: 3
+                items: 2
             },
             1000: {
                 items: 8

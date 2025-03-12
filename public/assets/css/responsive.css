@@ -660,7 +660,7 @@
     }
 
     div#target-section .stage-boggie img {
-        max-width: 400px;
+        max-width: 100%;
     }
 
 
@@ -800,7 +800,7 @@
         width: 100%;
     }
     
-    .gallery-item-parent ul li img {
+    .gallery-item-parent .item img {
         width: 70% !important;
     }
 }
