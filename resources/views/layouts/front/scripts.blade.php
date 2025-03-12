@@ -305,7 +305,7 @@
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 1
+                items: 3
             },
             600: {
                 items: 8
@@ -325,7 +325,7 @@
         margin: 10,
         nav: false,
         dots: false,
-        // autoWidth: true,
+        autoWidth: true,
         autoplay: true,
         slideTransition: 'linear',
         autoplayTimeout: 1500,
