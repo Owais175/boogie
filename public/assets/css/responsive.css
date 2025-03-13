@@ -603,8 +603,8 @@
     }
 
     .left-eye {
-        left: 11px;
-        top: 36px;
+        left: 14px;
+        top: 45px;
     }
 
     .cta-content .btn.custom-btn {
@@ -710,7 +710,7 @@
     .winks-gifs {
         left: 0;
         bottom: 0px;
-        margin-bottom: -107px;
+        margin-bottom: -90px;
     }
 
     ul.footer-first-child {
@@ -756,7 +756,7 @@
     }
 
     .left-eye img {
-        width: 280px !important;
+        width: 310px !important;
         height: 90px;
     }
 
@@ -809,7 +809,37 @@
     }
 
     span.shadow-light {
-        right: -250px;
+        right: -232px;
         left: unset;
+    }
+}
+
+@media (max-width: 400px) {
+    .left-eye {
+        left: 11px;
+        top: 36px;
+    }
+
+    .left-eye img {
+        width: 280px !important;
+        height: 90px;
+    }
+
+    .boogie-content p.para {
+        width: 85%;
+    }
+
+    span.shadow-light {
+        right: -250px;
+    }
+
+    .dancing-section .heading-3 {
+        font-size: 22px;
+    }
+    .video-mian img {
+        width: 90% !important;
+    }
+    .winks-gifs {
+        margin-bottom: -108px;
     }
 }

@@ -1007,9 +1007,6 @@
                                     </div>
                                 </div>
 
-
-
-                                {{-- {!! $section[7]->value !!} --}}
                                 <div class="roadmap-content" id="roadmap">
                                     <h3>
                                         <img alt="" class="img-fluid" src="{!! $section[24]->value !!}" />
@@ -1042,7 +1039,7 @@
                                             <li><span></span>
                                                 {!! $section[36]->value !!}</li>
                                             <li><span></span>
-                                                {!! $section[37]->value !!}  </li>
+                                                {!! $section[37]->value !!} </li>
                                             <li class="last"><span></span>
                                                 {!! $section[38]->value !!} </li>
                                             <li><span></span>
