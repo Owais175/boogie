@@ -1009,51 +1009,47 @@
 
 
 
-                                <!--{!! $section[7]->value !!}-->
+                                {{-- {!! $section[7]->value !!} --}}
                                 <div class="roadmap-content" id="roadmap">
-
                                     <h3>
-                                        <img alt="" class="img-fluid" src="assets/images/roadmap.png" /> Roadmap
+                                        <img alt="" class="img-fluid" src="{!! $section[24]->value !!}" />
+                                        {!! $section[25]->value !!}
                                     </h3>
                                     <div class="parent-ul-road-map">
                                         <ul>
-                                            <h4>Q2 2025</h4>
+                                            <h4>{!! $section[26]->value !!}</h4>
                                             <li><span></span>
-                                                Community Buiding</li>
+                                                {!! $section[27]->value !!} </li>
                                             <li><span></span>
-                                                Pink Sale</li>
+                                                {!! $section[28]->value !!} </li>
                                             <li><span></span>
-                                                Influencer Onboarding</li>
+                                                {!! $section[29]->value !!} </li>
                                             <li><span></span>
-                                                Token Creation & Launch</li>
+                                                {!! $section[30]->value !!} </li>
                                             <li><span></span>
-                                                Dex Listings</li>
+                                                {!! $section[31]->value !!}</li>
                                             <li class="last">
                                                 <span></span>
-                                                Marketing & Trending Campaign
+                                                {!! $section[32]->value !!}
                                             </li>
                                         </ul>
                                         <ul>
-                                            <h4>Q3 2025</h4>
+                                            <h4> {!! $section[33]->value !!}</h4>
                                             <li><span></span>
-                                                Coin Market Cap / Coin Ghecko</li>
+                                                {!! $section[34]->value !!}</li>
                                             <li><span></span>
-                                                Cex Listings</li>
+                                                {!! $section[35]->value !!} </li>
                                             <li><span></span>
-                                                Ecosystem Integration</li>
+                                                {!! $section[36]->value !!}</li>
                                             <li><span></span>
-                                                Certik Audit</li>
+                                                {!! $section[37]->value !!}  </li>
                                             <li class="last"><span></span>
-                                                Top 10 Cex Listings</li>
+                                                {!! $section[38]->value !!} </li>
                                             <li><span></span>
-                                                Partnerships</li>
+                                                {!! $section[39]->value !!} </li>
                                         </ul>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
