@@ -54,10 +54,10 @@ class LoginController extends Controller
 
     public function authenticated(Request $request, $user)
     {
-        activity($user->name)
-            ->performedOn($user)
-            ->causedBy($user)
-            ->log('LoggedIn');
+        // activity($user->name)
+        //     ->performedOn($user)
+        //     ->causedBy($user)
+        //     ->log('LoggedIn');
 
           if(auth()->user()->isAdmin() == true) {
                return redirect('admin/dashboard');
@@ -74,10 +74,10 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         $user = auth()->user();
-        activity($user->name)
-            ->performedOn($user)
-            ->causedBy($user)
-            ->log('LoggedOut');
+        // activity($user->name)
+        //     ->performedOn($user)
+        //     ->causedBy($user)
+        //     ->log('LoggedOut');
         $this->guard()->logout();
         $request->session()->invalidate();
 
