@@ -12,11 +12,16 @@ html {
     src: url('../fonts/Helvetica.ttf');
 }
 
+@font-face {
+    font-family: Bitcrusher_Variable;
+    src: url('../fonts/fonnts.com-Bitcrusher_Variable_Regular.otf');
+}
+
 header {
     background: white;
     padding-top: 4rem;
     padding-bottom: 1.7rem;
-    padding-left: 15.3rem;
+    padding-left: 22rem;
     padding-right: 10rem;
 }
 
@@ -96,7 +101,7 @@ header a.nav-link {
     font-weight: 700;
     color: black !important;
     padding: 0 !important;
-    font-size: 17px;
+    font-size: 18px;
     font-family: Helvetica;
 }
 
@@ -504,6 +509,7 @@ section.roadmap {
     font-size: 38px;
     color: white;
     font-family: sriracha, cursive;
+    font-family: bitcrusher;
 }
 
 .parent-ul-road-map ul {
@@ -545,6 +551,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1rem;
 }
 
 footer ul li a {
@@ -814,9 +821,12 @@ body.fp-viewing-3rdPage #section3 p {
     font-family: 'Helvetica';
     margin-top: 4rem;
     font-size: 16px;
-
     font-weight: 300 !important;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 100px;
 }
 
 ul.footer-first-child.footer-second-child h6 {
@@ -1298,12 +1308,12 @@ div#main-parent {
 header .navbar-nav.mr-auto {
     margin-right: 0px !important;
     margin-bottom: 0;
-    margin-left: 100px;
-    gap: 35px;
+    margin-left: 110px;
+    gap: 30px;
 }
 
 a.navbar-brand img {
-    width: 285px;
+    /* width: 285px; */
     margin-bottom: 9px;
 }
 
@@ -1408,7 +1418,7 @@ button.scroll-btn {
 
 .cta-section.who-section {
     height: auto;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .footer-first-child .footer-gap-btn {
@@ -2162,6 +2172,24 @@ section#ecosystem .card-content {
     border-color: #28a745;
     padding: 0 10px;
     padding-left: 0;
+}
+
+
+.child-marquee h3 {
+    font-family: Bitcrusher_Variable;
+    margin: 0 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bottom-footer.text-center img {
+    width: 133px;
+    height: 136px;
 }
 
 /* admin css */

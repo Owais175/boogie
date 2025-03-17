@@ -642,8 +642,8 @@
     }
 
     .boogie-content p.para {
-        width: 75%;
-        font-size: 19px;
+        width: 80%;
+        font-size: 20px;
         margin: auto;
     }
 
@@ -653,7 +653,8 @@
 
 
     .boogie-content h2 {
-        font-size: 20px;
+        font-size: 30px;
+        font-weight: 900;
     }
 
     .right-eye img {
@@ -680,7 +681,7 @@
     }
 
     .logos-new {
-        padding: 0;
+        padding: 6rem 0 7rem;
     }
 
 
@@ -698,7 +699,7 @@
     }
 
     video#dancingVideo {
-        height: unset;
+        height: 350px;
         margin-top: 0;
     }
 
@@ -781,7 +782,7 @@
     }
 
     .dancing-sec-right {
-        height: 210px;
+        height: 350px;
     }
 
     .child-marquee img {
@@ -809,8 +810,111 @@
     }
 
     span.shadow-light {
-        right: -232px;
+        right: -160px;
         left: unset;
+        top: 70px;
+    }
+
+    header {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    .bottom-header h2 {
+        font-size: 25px;
+    }
+
+    .main-hero-content {
+        display: none;
+    }
+
+    .social-links img {
+        width: 25px;
+    }
+
+    .boogie-content {
+        padding-top: 60px;
+        margin-bottom: 70px;
+    }
+
+    .boogie-hero-section {
+        padding-bottom: 4rem;
+    }
+
+    .cta-section {
+        padding: 5rem 0 7rem;
+    }
+
+    section#targetSection {
+        padding-top: 170px;
+        padding-bottom: 20px;
+    }
+
+    .stage-toggie-ces.animate .MusicPlayer2802357603__root {
+        top: 0;
+    }
+
+    .stage-toggie-ces.animate .shadow-light img {
+        width: 750px;
+        margin: auto;
+    }
+
+    .TrackName3057130458__title {
+        font-size: 22px;
+        width: 300px;
+    }
+
+    .Cover2206545806__cover {
+        width: 90px;
+        height: 90px;
+    }
+
+    .MusicPlayer2802357603__mainLayout {
+        height: 90px;
+    }
+
+    .MusicPlayer2802357603__mainLayoutWrapper {
+        height: 90px;
+    }
+
+    span.direction-hand {
+        left: 0;
+    }
+
+    span.direction-hand img {
+        width: 90px;
+    }
+
+    .child-marquee h3 {
+        font-size: 25px;
+        margin: 0 10px;
+    }
+
+    .dancing-section {
+        padding-top: 7rem;
+    }
+
+    .dancing-sec-left {
+        padding-bottom: 4rem;
+    }
+
+    .parent-big-image img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .bottom-footer.text-center {
+        margin: 0;
+        display: block;
+        margin-top: 60px;
+    }
+
+    .bottom-footer.text-center img {
+        display: block;
+        margin: auto;
+        width: 90px;
+        height: 90px;
+        margin-top: 15px;
     }
 }
 
@@ -836,10 +940,16 @@
     .dancing-section .heading-3 {
         font-size: 22px;
     }
+
     .video-mian img {
         width: 90% !important;
     }
+
     .winks-gifs {
         margin-bottom: -108px;
+    }
+
+    .child-marquee h3 {
+        font-size: 22px;
     }
 }

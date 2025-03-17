@@ -116,7 +116,8 @@
             </div>
             <div class="col-lg-12">
                 <div class="bottom-footer text-center">
-                    {{ $address[3] }}
+                    {{ $address[3] }} <img src="{{ asset('assets/images/usa-img.png') }}" class="img-fluid"
+                        alt="">
                 </div>
             </div>
         </div>
