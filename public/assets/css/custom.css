@@ -103,6 +103,9 @@ header a.nav-link {
     padding: 0 !important;
     font-size: 18px;
     font-family: Helvetica;
+    border-bottom: 1px solid black;
+    !i;!;
+    line-height: 15px;
 }
 
 .what-is-boogie {
@@ -1332,6 +1335,8 @@ header .container {
 
 header ul li:nth-child(6) a {
     color: #FF1AB8 !important;
+    border-bottom: 1px solid #FF1AB8;!;
+    line-height: 15px;
 }
 
 .hidden {

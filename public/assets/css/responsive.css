@@ -60,9 +60,12 @@
     }
 
     .products-list {
-        text-align: center;
         margin-top: 3rem;
         margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 
     .ecosystem-child.ecosystem-child-1 {
@@ -934,7 +937,7 @@
     }
 
     span.shadow-light {
-        right: -190px;
+        right: -250px;
     }
 
     .dancing-section .heading-3 {
