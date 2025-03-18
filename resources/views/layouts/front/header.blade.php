@@ -19,19 +19,20 @@
 
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item">
+                                        {{-- <li class="nav-item">
                                             <a class="nav-link" href="#">Home <span
                                                     class="sr-only">(current)</span></a>
-                                        </li>
+                                        </li> --}}
                                         <li class="nav-item">
                                             <a class="nav-link scroll-btn" href="#meme">Memes</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link scroll-btn" href="#tokenomics">Tokenomics</a>
-                                        </li>
-                                        <li class="nav-item">
                                             <a class="nav-link scroll-btn" href="#roadmap">Roadmap</a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-btn" href="#tokenomics">Tokenomics</a>
+                                        </li>
+
                                         <li class="nav-item">
                                             <a class="nav-link scroll-btn" href="#ecosystem">Ecosystem</a>
                                         </li>
@@ -44,7 +45,8 @@
                                             target="_blank">White Paper</a>
                                     </li> --}}
                                         <li class="nav-item scroll-btn">
-                                            <a class="nav-link buy-btn scroll-btn" href="https://jup.ag/swap/49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S-SOL">Buy</a>
+                                            <a class="nav-link buy-btn scroll-btn"
+                                                href="https://jup.ag/swap/49NKopHuSUm2SMgSWmq2fkmU1L6dCtpchFEhPMtbaB3S-SOL">Buy</a>
                                         </li>
                                     </ul>
                                 </div>

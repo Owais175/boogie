@@ -17,6 +17,11 @@ html {
     src: url('../fonts/fonnts.com-Bitcrusher_Variable_Regular.otf');
 }
 
+@font-face {
+    font-family: EurostileBold;
+    src: url('../fonts/Eurostile/EurostileBold.ttf');
+}
+
 header {
     background: white;
     padding-top: 4rem;
@@ -104,8 +109,6 @@ header a.nav-link {
     font-size: 18px;
     font-family: Helvetica;
     border-bottom: 1px solid black;
-    !i;
-    !;
     line-height: 15px;
 }
 
@@ -138,7 +141,7 @@ header a.nav-link {
 .marquee-section {
     /* border-top: 3px solid black; */
     /* border-bottom: 3px solid black; */
-    padding: 20px 0;
+    padding: 10px 0;
     overflow-x: hidden;
     width: 100%;
     /* position: absolute; */
@@ -513,7 +516,8 @@ section.roadmap {
     font-size: 38px;
     color: white;
     font-family: sriracha, cursive;
-    font-family: bitcrusher;
+    /* font-family: bitcrusher; */
+    font-family: Helvetica;
 }
 
 .parent-ul-road-map ul {
@@ -523,9 +527,10 @@ section.roadmap {
 
 .parent-ul-road-map ul li {
     color: white;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 18px;
     font-family: inherit;
+    font-family: Helvetica;
 }
 
 .parent-ul-road-map ul li span {
@@ -626,7 +631,7 @@ a.nav-link.buy-btn {
     background: #fef100;
     border: 1px solid black;
     border-radius: 15px;
-    padding: 3px 25px !important;
+    padding: 8px 25px !important;
     text-decoration: none;
 }
 
@@ -1337,10 +1342,9 @@ header .container {
     margin: auto;
 }
 
-header ul li:nth-child(6) a {
+header ul li:nth-child(5) a {
     color: #FF1AB8 !important;
     border-bottom: 1px solid #FF1AB8;
-    !;
     line-height: 15px;
 }
 
@@ -2185,7 +2189,6 @@ section#ecosystem .card-content {
     padding-left: 0;
 }
 
-
 .child-marquee h3 {
     font-family: Bitcrusher_Variable;
     margin: 0 30px;
@@ -2285,6 +2288,15 @@ section#ecosystem .card-content {
 .hidden-roadmap.active .roadmap-content {
     bottom: 10px;
     transition: all ease 2s;
+}
+
+
+.who-section-change .child-marquee {
+    width: 100%;
+}
+
+.hidden-roadmap .parent-ul-road-map h4 {
+    font-family: EurostileBold;
 }
 
 /* admin css */

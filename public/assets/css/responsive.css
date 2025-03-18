@@ -254,13 +254,14 @@
     }
 
     header {
-        padding-top: 45px;
-        padding-left: 50px;
+        padding-top: 50px;
+        padding-left: 90px;
         padding-right: 50px;
     }
 
     .social-links {
-        margin-top: 5px;
+        margin-top: 10px;
+        margin-left: 60px;
     }
 
     .cta-content .btn.custom-btn {
@@ -402,6 +403,9 @@
         margin-top: 30px;
     }
 
+    header .navbar-nav.mr-auto {
+        margin-left: 120px;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -827,7 +831,7 @@
     }
 
     span.shadow-light {
-        right: -160px;
+        right: -175px;
         left: unset;
         top: 70px;
     }
