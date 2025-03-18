@@ -688,8 +688,6 @@
     .product-child {
         padding: 12px 20px;
         width: 98% !important;
-        !i;
-        !;
     }
 
     .card.con-df {
@@ -717,6 +715,8 @@
 
     .card.con-df {
         transform: skew(0deg, 0deg);
+        height: 260px;
+        margin-bottom: 20px !important;
     }
 
     video#dancingVideo {
@@ -725,7 +725,7 @@
     }
 
     section.ecosystem {
-        padding: 6rem 2rem 0rem;
+        padding: 6rem 1.5rem 0rem;
     }
 
 
@@ -819,7 +819,7 @@
     }
 
     .con-p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .gallery-item-parent ul li {
@@ -960,6 +960,11 @@
         margin: 0;
         margin: auto;
     }
+
+    section#ecosystem .card-content {
+        padding: 0;
+        height: 320px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -999,5 +1004,20 @@
 
     .hidden-roadmap .roadmap-content {
         width: 96%;
+    }
+
+    .card.con-df img {
+        margin: auto;
+        width: 75%;
+        margin-bottom: 10px;
+    }
+
+    .card.con-df {
+        height: 240px;
+        padding-bottom: 20px;
+    }
+
+    section#ecosystem .card-content {
+        height: 290px;
     }
 }
