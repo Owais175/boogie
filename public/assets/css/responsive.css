@@ -951,10 +951,14 @@
         margin-top: 0;
     }
 
+    button.navbar-toggler {
+        display: none;
+    }
 
-    .hidden-roadmap .roadmap-content {
-        bottom: -500px;
-        width: 97%;
+    header nav.navbar.navbar-expand-lg.navbar-light a.navbar-brand {
+        width: 90%;
+        margin: 0;
+        margin: auto;
     }
 }
 

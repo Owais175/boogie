@@ -2220,12 +2220,13 @@ section#ecosystem .card-content {
     height: 65%;
     position: absolute;
     z-index: 1;
-    bottom: -60px;
+    bottom: -375px;
     right: 6px;
     width: 85%;
     margin: auto;
     left: 0;
     transition: all ease 2s;
+    transform: skew(-20deg, 30deg);
 }
 
 .hidden-roadmap {
@@ -2249,18 +2250,20 @@ section#ecosystem .card-content {
     position: absolute;
     z-index: 0;
     left: 0;
-    bottom: -720px;
+    bottom: -1020px;
     right: 0;
     transition: all ease 2s;
+    transform: skew(-20deg, 30deg);
 }
 
 .hidden-roadmap .roadmap-content {
     position: absolute;
     z-index: 0;
     left: 0;
-    bottom: -360px;
+    bottom: -620px;
     right: 0;
     transition: all ease 2s;
+    transform: skew(-20deg, 30deg);
 }
 
 .hidden-ticker.active {
@@ -2276,6 +2279,7 @@ section#ecosystem .card-content {
 }
 
 .hidden-ticker.active .product-child {
+    transform: skew(0deg, 0deg);
     bottom: 15px;
     transition: all ease 2s;
 }
@@ -2283,11 +2287,13 @@ section#ecosystem .card-content {
 .hidden-tokenomics.active .roadmap-content.chart-2\.0 {
     bottom: 16px;
     transition: all ease 2s;
+    transform: skew(0deg, 0deg);
 }
 
 .hidden-roadmap.active .roadmap-content {
     bottom: 10px;
     transition: all ease 2s;
+    transform: skew(0deg, 0deg);
 }
 
 
