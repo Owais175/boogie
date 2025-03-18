@@ -17,25 +17,54 @@
 
 
 <script>
+    // $(document).ready(function() {
+    //     var targetSection = $('#imgunset');
+    //     var added = false;
+
+    //     $(window).scroll(function() {
+    //         var scrollPos = $(window).scrollTop();
+    //         var windowHeight = $(window).height();
+    //         var sectionTop = targetSection.offset().top;
+    //         var sectionBottom = sectionTop + targetSection.outerHeight();
+
+    //         if (scrollPos + windowHeight >= sectionBottom && !added) {
+    //             targetSection.addClass('active');
+    //             added = true;
+    //             console.log('Class added');
+    //         } else if (scrollPos + windowHeight < sectionBottom && added) {
+    //             targetSection.removeClass('active');
+    //             added = false;
+    //             console.log('Class added');
+    //         }
+    //     });
+    // });
+
     $(document).ready(function() {
-        var targetSection = $('#imgunset');
-        var added = false;
+        var targetSelectors = ['#imgunset', '.hidden-ticker', '.hidden-tokenomics',
+            '.hidden-roadmap'
+        ];
 
         $(window).scroll(function() {
             var scrollPos = $(window).scrollTop();
             var windowHeight = $(window).height();
-            var sectionTop = targetSection.offset().top;
-            var sectionBottom = sectionTop + targetSection.outerHeight();
 
-            if (scrollPos + windowHeight >= sectionBottom && !added) {
-                targetSection.addClass('active');
-                added = true;
-                console.log('Class added');
-            } else if (scrollPos + windowHeight < sectionBottom && added) {
-                targetSection.removeClass('active');
-                added = false;
-                console.log('Class added');
-            }
+            targetSelectors.forEach(function(selector) {
+                $(selector).each(function() {
+                    var section = $(this);
+                    var sectionTop = section.offset().top;
+                    var sectionBottom = sectionTop + section.outerHeight();
+
+                    if (scrollPos + windowHeight >= sectionBottom && !section.hasClass(
+                            'active')) {
+                        section.addClass('active');
+                        console.log('Class added to:', selector);
+                    } else if (scrollPos + windowHeight < sectionBottom && section
+                        .hasClass('active')) {
+                        section.removeClass('active');
+                        console.log('Class removed from:', selector);
+                    }
+                });
+            });
         });
     });
 </script>

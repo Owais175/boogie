@@ -597,7 +597,7 @@
                             </button>
                         </div>
                         <div class="child-marquee item">
-                            <h3>LIQUIDITY LOCKED</h3>  
+                            <h3>LIQUIDITY LOCKED</h3>
                             <button class="btn hover-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                                     <path
@@ -607,7 +607,7 @@
                             </button>
                         </div>
                         <div class="child-marquee item">
-                            <h3>LP:BURNED</h3>  
+                            <h3>LP:BURNED</h3>
                             <button class="btn hover-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                                     <path
@@ -617,7 +617,7 @@
                             </button>
                         </div>
                         <div class="child-marquee item">
-                            <h3>MINT:REVOKE</h3>  
+                            <h3>MINT:REVOKE</h3>
                             <button class="btn hover-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                                     <path
@@ -627,7 +627,7 @@
                             </button>
                         </div>
                         <div class="child-marquee item">
-                            <h3>FAIR LAUNCH</h3>  
+                            <h3>FAIR LAUNCH</h3>
                             <button class="btn hover-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                                     <path
@@ -942,16 +942,18 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="product-parent">
-                                <div class="product-child">
-                                    <span>
-                                        Ticker: {!! $section[4]->value !!}
-                                    </span>
-                                    <span>
-                                        Supply: {!! $section[5]->value !!}
-                                    </span>
-                                    <span>
-                                        Tax: {!! $section[6]->value !!}
-                                    </span>
+                                <div class="hidden-ticker">
+                                    <div class="product-child">
+                                        <span>
+                                            Ticker: {!! $section[4]->value !!}
+                                        </span>
+                                        <span>
+                                            Supply: {!! $section[5]->value !!}
+                                        </span>
+                                        <span>
+                                            Tax: {!! $section[6]->value !!}
+                                        </span>
+                                    </div>
                                 </div>
                                 <!--<div class="product-child">-->
                                 <!--    <span>-->
@@ -979,54 +981,56 @@
                                 <!--    </span>-->
                                 <!--</div>-->
 
-
-                                <div class="roadmap-content chart-2.0">
-                                    <h3>
-                                        Tokenomics
-                                    </h3>
-                                    <div class="parent-ul-road-map">
-                                        <img src="{!! $section[15]->value !!}" class="img-fluid">
+                                <div class="hidden-tokenomics">
+                                    <div class="roadmap-content chart-2.0">
+                                        <h3>
+                                            Tokenomics
+                                        </h3>
+                                        <div class="parent-ul-road-map">
+                                            <img src="{!! $section[15]->value !!}" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="roadmap-content" id="roadmap">
-                                    <h3>
-                                        <img alt="" class="img-fluid" src="{!! $section[24]->value !!}" />
-                                        {!! $section[25]->value !!}
-                                    </h3>
-                                    <div class="parent-ul-road-map">
-                                        <ul>
-                                            <h4>{!! $section[26]->value !!}</h4>
-                                            <li><span></span>
-                                                {!! $section[27]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[28]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[29]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[30]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[31]->value !!}</li>
-                                            <li class="last">
-                                                <span></span>
-                                                {!! $section[32]->value !!}
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <h4> {!! $section[33]->value !!}</h4>
-                                            <li><span></span>
-                                                {!! $section[34]->value !!}</li>
-                                            <li><span></span>
-                                                {!! $section[35]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[36]->value !!}</li>
-                                            <li><span></span>
-                                                {!! $section[37]->value !!} </li>
-                                            <li class="last"><span></span>
-                                                {!! $section[38]->value !!} </li>
-                                            <li><span></span>
-                                                {!! $section[39]->value !!} </li>
-                                        </ul>
+                                <div class="hidden-roadmap">
+                                    <div class="roadmap-content" id="roadmap">
+                                        <h3>
+                                            <img alt="" class="img-fluid" src="{!! $section[24]->value !!}" />
+                                            {!! $section[25]->value !!}
+                                        </h3>
+                                        <div class="parent-ul-road-map">
+                                            <ul>
+                                                <h4>{!! $section[26]->value !!}</h4>
+                                                <li><span></span>
+                                                    {!! $section[27]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[28]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[29]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[30]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[31]->value !!}</li>
+                                                <li class="last">
+                                                    <span></span>
+                                                    {!! $section[32]->value !!}</li>
+                                            </ul>
+                                            <ul>
+                                                <h4> {!! $section[33]->value !!}</h4>
+                                                <li><span></span>
+                                                    {!! $section[34]->value !!}</li>
+                                                <li><span></span>
+                                                    {!! $section[35]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[36]->value !!}</li>
+                                                <li><span></span>
+                                                    {!! $section[37]->value !!} </li>
+                                                <li class="last"><span></span>
+                                                    {!! $section[38]->value !!} </li>
+                                                <li><span></span>
+                                                    {!! $section[39]->value !!} </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -338,7 +338,7 @@
 
     .roadmap-content.chart-2\.0 {
         height: auto;
-        width: 60%;
+        width: 85%;
         margin: auto;
         margin-bottom: 50px;
     }
@@ -349,7 +349,7 @@
 
     .roadmap-content {
 
-        width: 60%;
+        width: 85%;
 
         margin: auto;
 
@@ -390,6 +390,16 @@
 
     ul.footer-first-child {
         padding-left: 120px;
+    }
+
+
+    .hidden-tokenomics {
+        height: 500px;
+    }
+
+    .hidden-roadmap {
+        height: 290px;
+        margin-top: 30px;
     }
 
 }
@@ -638,6 +648,7 @@
 
     .roadmap-content.chart-2\.0 {
         height: 350px;
+        width: 96%;
     }
 
     .parent-marquee-2 .child-marquee.item img {
@@ -672,6 +683,9 @@
 
     .product-child {
         padding: 12px 20px;
+        width: 98% !important;
+        !i;
+        !;
     }
 
     .card.con-df {
@@ -919,6 +933,25 @@
         height: 90px;
         margin-top: 15px;
     }
+
+    .hidden-tokenomics {
+        height: 440px;
+    }
+
+    .hidden-ticker {
+        margin-bottom: 20px;
+    }
+
+    .hidden-roadmap {
+        height: 540px;
+        margin-top: 0;
+    }
+
+
+    .hidden-roadmap .roadmap-content {
+        bottom: -500px;
+        width: 97%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -937,7 +970,7 @@
     }
 
     span.shadow-light {
-        right: -250px;
+        right: -195px;
     }
 
     .dancing-section .heading-3 {
@@ -954,5 +987,9 @@
 
     .child-marquee h3 {
         font-size: 22px;
+    }
+
+    .hidden-roadmap .roadmap-content {
+        width: 96%;
     }
 }
