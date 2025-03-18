@@ -237,6 +237,7 @@ class PageController extends Controller
 
             $page = Page::findOrFail($id);
             $page->update($requestData);
+            
             return redirect()->back()->with('message', 'Page updated!');
 
     }

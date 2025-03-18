@@ -24,6 +24,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <div class="content-body">
         <section id="basic-form-layouts">
             <div class="row match-height">
