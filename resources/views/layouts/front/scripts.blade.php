@@ -351,7 +351,6 @@
     jQuery('.parent-marquee-2').owlCarousel({
         center: true,
         items: 6,
-        rewind: true,
         loop: true,
         margin: 10,
         nav: false,
@@ -359,8 +358,8 @@
         autoWidth: true,
         autoplay: true,
         slideTransition: 'linear',
-        autoplayTimeout: 2000,
-        autoplaySpeed: 2000,
+        autoplayTimeout: 1500,
+        autoplaySpeed: 1500,
         autoplayHoverPause: true,
         responsive: {
             0: {

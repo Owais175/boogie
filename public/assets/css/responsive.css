@@ -762,8 +762,6 @@
     .winks-gifs figure img {
         margin-left: -40px !important;
         width: 90% !important;
-        !i;
-        !;
     }
 
 
@@ -1007,6 +1005,7 @@
         /* margin: auto; */
         width: 85%;
     }
+
 }
 
 @media (max-width: 400px) {
