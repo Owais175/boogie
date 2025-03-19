@@ -717,6 +717,7 @@
         transform: skew(0deg, 0deg);
         height: 260px;
         margin-bottom: 20px !important;
+        padding-bottom: 20px;
     }
 
     video#dancingVideo {
