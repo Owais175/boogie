@@ -324,14 +324,15 @@
         center: true,
         items: 8,
         loop: true,
-        margin: 40,
+        margin: 10,
         nav: false,
         dots: false,
-        autoplay: true,
-        slideTransition: 'linear',
-        autoplayTimeout: 1500,
-        autoplaySpeed: 1500,
-        autoplayHoverPause: true,
+        autoWidth: true,
+        // autoplay: true,
+        // slideTransition: 'linear',
+        // autoplayTimeout: 1500,
+        // autoplaySpeed: 1500,
+        // autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 3
@@ -363,13 +364,17 @@
         responsive: {
             0: {
                 items: 2,
-                center: false,
-                autoWidth: false,
+                center: true,
+                autoWidth: true,
+                margin: 20,
+
             },
             600: {
                 items: 2,
-                center: false,
-                autoWidth: false,
+                center: true,
+                autoWidth: true,
+                margin: 20,
+
             },
             1000: {
                 items: 4

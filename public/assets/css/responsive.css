@@ -843,6 +843,7 @@
 
     .bottom-header h2 {
         font-size: 25px;
+        padding-left: 0;
     }
 
     .main-hero-content {
@@ -850,7 +851,7 @@
     }
 
     .social-links img {
-        width: 25px;
+        width: 28px;
     }
 
     .boogie-content {
@@ -864,6 +865,7 @@
 
     .cta-section {
         padding: 5rem 0 7rem;
+        padding-bottom: 10rem;
     }
 
     section#targetSection {
@@ -965,6 +967,29 @@
         padding: 0;
         height: 320px;
     }
+
+    .social-links {
+        margin-left: 0;
+    }
+
+    .products-list {
+        gap: 10px;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .products-list span img {
+        width: 55px !important;
+    }
+
+    .child-marquee {
+        text-align: center;
+        display: inline-block;
+    }
+
+    .boogie_bot {
+        text-align: center;
+    }
 }
 
 @media (max-width: 400px) {
@@ -1019,5 +1044,9 @@
 
     section#ecosystem .card-content {
         height: 290px;
+    }
+
+    .product-child span {
+        font-size: 14px;
     }
 }

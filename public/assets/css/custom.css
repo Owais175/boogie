@@ -183,9 +183,11 @@ figure {
     padding-top: 10px;
 }
 
-.child-marquee {
+.parent-marquee .child-marquee {
     position: relative;
     z-index: 0;
+    text-align: center;
+    display: inline-block;
 }
 
 .child-marquee:hover button {
@@ -2303,6 +2305,10 @@ section#ecosystem .card-content {
 
 .hidden-roadmap .parent-ul-road-map h4 {
     font-family: EurostileBold;
+}
+
+.parent-marquee .child-marquee img {
+    width: 65%;
 }
 
 /* admin css */
