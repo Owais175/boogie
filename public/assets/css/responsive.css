@@ -692,8 +692,10 @@
 
     .card.con-df {
         /* position: unset; */
-        top: unset;
-        bottom: -400px;
+        /* top: unset;
+        bottom: -400px; */
+        bottom: 0;
+        top: 0;
     }
 
     section.certik {
@@ -718,7 +720,7 @@
     }
 
     .card.con-df {
-        /* transform: skew(0deg, 0deg); */
+        transform: skew(0deg, 0deg);
         height: 270px;
         margin: auto;
         margin-bottom: 20px !important;
@@ -1012,9 +1014,9 @@
         display: block;
     }
 
-    .section.active .card.con-df {
+    /* .section.active .card.con-df {
         bottom: 0;
-    }
+    } */
 
 }
 
