@@ -328,11 +328,11 @@
         nav: false,
         dots: false,
         autoWidth: true,
-        // autoplay: true,
-        // slideTransition: 'linear',
-        // autoplayTimeout: 1500,
-        // autoplaySpeed: 1500,
-        // autoplayHoverPause: true,
+        autoplay: true,
+        slideTransition: 'linear',
+        autoplayTimeout: 1500,
+        autoplaySpeed: 1500,
+        autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 3
