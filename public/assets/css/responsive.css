@@ -691,7 +691,9 @@
     }
 
     .card.con-df {
-        position: unset;
+        /* position: unset; */
+        top: unset;
+        bottom: -400px;
     }
 
     section.certik {
@@ -716,7 +718,7 @@
     }
 
     .card.con-df {
-        transform: skew(0deg, 0deg);
+        /* transform: skew(0deg, 0deg); */
         height: 270px;
         margin: auto;
         margin-bottom: 20px !important;
@@ -1004,6 +1006,14 @@
     .card.con-df img {
         /* margin: auto; */
         width: 85%;
+    }
+
+    .mob-view {
+        display: block;
+    }
+
+    .section.active .card.con-df {
+        bottom: 0;
     }
 
 }
