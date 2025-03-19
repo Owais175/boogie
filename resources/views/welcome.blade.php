@@ -1176,10 +1176,10 @@ alt="">
                             </figure>
                         </div>
                         <div class="row align-items-start justify-content-center">
-                            <div class="col-lg-6 col-6">
+                            <div class="col-lg-6 col-5">
 
                             </div>
-                            <div class="col-lg-6 col-md-6 col-6">
+                            <div class="col-lg-6 col-md-6 col-7">
                                 <div class="parent-last-video">
                                     <p class="certik-right">
                                         {!! $section[12]->value !!}
