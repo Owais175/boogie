@@ -710,7 +710,7 @@
 
     section.certik p {
         font-size: 16px !important;
-        margin-top: -60px;
+        margin-top: -82px;
         position: relative;
         z-index: -1;
     }
@@ -1000,6 +1000,11 @@
 
     .boogie_bot {
         text-align: center;
+    }
+
+    .card.con-df img {
+        /* margin: auto; */
+        width: 70%;
     }
 }
 
