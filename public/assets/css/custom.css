@@ -2268,31 +2268,31 @@ section#ecosystem .card-content {
     transform: skew(-20deg, 30deg);
 }
 
-.hidden-ticker.active {
+.product-list.active .hidden-ticker {
     transition: all ease 2s;
 }
 
-.hidden-tokenomics.active {
+.product-list.active .hidden-tokenomics {
     transition: all ease 2s;
 }
 
-.hidden-roadmap.active {
+.product-list.active .hidden-roadmap {
     transition: all ease 2s;
 }
 
-.hidden-ticker.active .product-child {
+.product-list.active .hidden-ticker .product-child {
     transform: skew(0deg, 0deg);
     bottom: 15px;
     transition: all ease 2s;
 }
 
-.hidden-tokenomics.active .roadmap-content.chart-2\.0 {
+.product-list.active .hidden-tokenomics .roadmap-content.chart-2\.0 {
     bottom: 16px;
     transition: all ease 2s;
     transform: skew(0deg, 0deg);
 }
 
-.hidden-roadmap.active .roadmap-content {
+.product-list.active .hidden-roadmap .roadmap-content {
     bottom: 10px;
     transition: all ease 2s;
     transform: skew(0deg, 0deg);

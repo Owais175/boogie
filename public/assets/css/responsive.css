@@ -719,7 +719,7 @@
 
     .card.con-df {
         /* transform: skew(0deg, 0deg); */
-         height: 270px;
+        height: 270px;
         margin: auto;
         margin-bottom: 20px !important;
         padding-bottom: 20px;
@@ -1014,6 +1014,10 @@
 
     .section.active .card.con-df {
         bottom: 0;
+    }
+
+    .roadmap-content {
+        width: 96% !important;
     }
 
 }

@@ -39,10 +39,37 @@
     //     });
     // });
 
+    // $(document).ready(function() {
+    //     var targetSelectors = ['#imgunset', '.hidden-ticker', '.hidden-tokenomics',
+    //         '.hidden-roadmap'
+    //     ];
+
+    //     $(window).scroll(function() {
+    //         var scrollPos = $(window).scrollTop();
+    //         var windowHeight = $(window).height();
+
+    //         targetSelectors.forEach(function(selector) {
+    //             $(selector).each(function() {
+    //                 var section = $(this);
+    //                 var sectionTop = section.offset().top;
+    //                 var sectionBottom = sectionTop + section.outerHeight();
+
+    //                 if (scrollPos + windowHeight >= sectionBottom && !section.hasClass(
+    //                         'active')) {
+    //                     section.addClass('active');
+    //                     console.log('Class added to:', selector);
+    //                 } else if (scrollPos + windowHeight < sectionBottom && section
+    //                     .hasClass('active')) {
+    //                     section.removeClass('active');
+    //                     console.log('Class removed from:', selector);
+    //                 }
+    //             });
+    //         });
+    //     });
+    // });
+
     $(document).ready(function() {
-        var targetSelectors = ['#imgunset', '.hidden-ticker', '.hidden-tokenomics',
-            '.hidden-roadmap'
-        ];
+        var targetSelectors = ['#imgunset', '.product-list'];
 
         $(window).scroll(function() {
             var scrollPos = $(window).scrollTop();
@@ -54,14 +81,13 @@
                     var sectionTop = section.offset().top;
                     var sectionBottom = sectionTop + section.outerHeight();
 
-                    if (scrollPos + windowHeight >= sectionBottom && !section.hasClass(
-                            'active')) {
+                    // Check if the section is fully visible in viewport
+                    if (scrollPos >= sectionTop - (windowHeight / 2) &&
+                        scrollPos <= sectionBottom - (windowHeight / 2) &&
+                        !section.hasClass('active')) {
+
                         section.addClass('active');
                         console.log('Class added to:', selector);
-                    } else if (scrollPos + windowHeight < sectionBottom && section
-                        .hasClass('active')) {
-                        section.removeClass('active');
-                        console.log('Class removed from:', selector);
                     }
                 });
             });
