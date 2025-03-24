@@ -389,13 +389,19 @@
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 3,
-                margin: 20,
+                items: 2,
+                margin: 10,
+                center: false,
+
+                // autoWidth: false,
 
             },
             600: {
                 items: 2,
-                margin: 20,
+                margin: 10,
+                center: false,
+
+                // autoWidth: false,
 
             },
             1000: {
