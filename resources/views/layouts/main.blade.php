@@ -19,8 +19,8 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
     <title>Boogie!</title>
     <!-- <style>
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    
+
     <div id="bottomtotop"><i class="fa-solid fa-arrow-up"></i></div>
 
 
@@ -55,21 +55,21 @@
     @yield('js')
 
     @if (Session::has('message'))
-    <script type="text/javascript">
-        toastr.success("{{ Session::get('message') }}");
-    </script>
+        <script type="text/javascript">
+            toastr.success("{{ Session::get('message') }}");
+        </script>
     @endif
 
     @if (Session::has('success'))
-    <script type="text/javascript">
-        toastr.success("{{ Session::get('success') }}");
-    </script>
+        <script type="text/javascript">
+            toastr.success("{{ Session::get('success') }}");
+        </script>
     @endif
 
     @if (Session::has('error'))
-    <script type="text/javascript">
-        toastr.error("{{ Session::get('error') }}");
-    </script>
+        <script type="text/javascript">
+            toastr.error("{{ Session::get('error') }}");
+        </script>
     @endif
 
 

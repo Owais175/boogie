@@ -389,30 +389,25 @@
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 2,
+                items: 3,
                 margin: 10,
                 center: false,
-
+                // autoWidth: false,
                 // autoWidth: false,
 
             },
             600: {
-                items: 2,
+                items: 3,
                 margin: 10,
                 center: false,
+                // autoWidth: false,
 
                 // autoWidth: false,
 
             },
             1000: {
-                items: 4
-            },
-            1199: {
                 items: 6
             },
-            1440: {
-                items: 7
-            }
         }
     });
 
