@@ -8,13 +8,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+
+<!-- Dropify JS -->
+<script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
 
 <!--<script src="js/lax.js"></script>-->
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
-
 
 <script>
     // $(document).ready(function() {
@@ -120,7 +126,11 @@
 </script>
 
 <script>
-    document.getElementById('uploadImage').addEventListener('change', function(event) {
+(function() {
+    const uploadInput = document.getElementById('uploadImage');
+    if (!uploadInput) return; // Now this return is valid, inside a function
+
+    uploadInput.addEventListener('change', function(event) {
         let previewContainer = document.getElementById('imagePreview');
         previewContainer.innerHTML = "";
 
@@ -162,8 +172,7 @@
                     files.splice(index, 1);
                     dataTransfer.items.clear();
                     files.forEach(f => dataTransfer.items.add(f));
-                    document.getElementById('uploadImage').files = dataTransfer
-                        .files;
+                    uploadInput.files = dataTransfer.files;
                 });
 
                 previewDiv.appendChild(img);
@@ -174,24 +183,28 @@
             dataTransfer.items.add(file);
         });
 
-        document.getElementById('uploadImage').files = dataTransfer.files;
+        uploadInput.files = dataTransfer.files;
     });
+})();
 </script>
+
+
 <script>
+document.addEventListener("DOMContentLoaded", function () {
     let canvas = document.getElementById("imageCanvas");
+    if (!canvas) return; // Exit script if canvas is not found
+
     let ctx = canvas.getContext("2d");
     let userImage = new Image();
     let templateImage = new Image();
     let isDragging = false;
-    let offsetX, offsetY, templateX = 50,
-        templateY = 50;
-    let templateWidth = 150,
-        templateHeight = 150;
+    let offsetX, offsetY, templateX = 50, templateY = 50;
+    let templateWidth = 150, templateHeight = 150;
 
     canvas.width = 500;
     canvas.height = 500;
 
-    document.getElementById("uploadImage").addEventListener("change", function(event) {
+    document.getElementById("uploadImage")?.addEventListener("change", function(event) {
         let file = event.target.files[0];
         if (file) {
             let reader = new FileReader();
@@ -216,7 +229,6 @@
         let imgY = (canvas.height - imgHeight) / 2;
 
         ctx.drawImage(userImage, imgX, imgY, imgWidth, imgHeight);
-
         ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
     }
 
@@ -240,17 +252,11 @@
         }
     });
 
-    canvas.addEventListener("mouseup", () => {
-        isDragging = false;
-    });
-    canvas.addEventListener("mouseleave", () => {
-        isDragging = false;
-    });
-    canvas.addEventListener("mouseout", () => {
-        isDragging = false;
+    ["mouseup", "mouseleave", "mouseout"].forEach(eventType => {
+        canvas.addEventListener(eventType, () => isDragging = false);
     });
 
-    function downloadImage() {
+    window.downloadImage = function() {
         let link = document.createElement("a");
 
         let tempCanvas = document.createElement("canvas");
@@ -268,13 +274,15 @@
         link.href = tempCanvas.toDataURL();
         link.click();
     }
+});
 </script>
 
+
 <script>
+document.addEventListener("DOMContentLoaded", function () {
     // Create a new IntersectionObserver instance
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Check if the section is in the viewport
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
             } else {
@@ -288,9 +296,13 @@
     // Select the section element
     const section = document.getElementById('animated-sec');
 
-    // Start observing the section
-    observer.observe(section);
+    // Only observe if section exists
+    if (section) {
+        observer.observe(section);
+    }
+});
 </script>
+
 
 <script>
     var swiper = new Swiper(".mySwiper", {
@@ -335,13 +347,28 @@
 
     });
     // ✅ Stop Swiper autoplay when clicking the label
-    document.querySelector(".stop_slider").addEventListener("click", function() {
-        swiper.autoplay.stop(); // 🛑 Stop autoplay
+    document.addEventListener("DOMContentLoaded", function () {
+        const stopBtn = document.querySelector(".stop_slider");
+        if (stopBtn) {
+            stopBtn.addEventListener("click", function() {
+                if (typeof swiper !== "undefined" && swiper.autoplay) {
+                    swiper.autoplay.stop(); // 🛑 Stop autoplay
+                }
+            });
+        }
     });
 
     // ✅ Restart Swiper autoplay when modal is closed
-    document.getElementById("imageEditorModal").addEventListener("hidden.bs.modal", function() {
-        swiper.autoplay.start(); // ▶ Restart autoplay
+    document.addEventListener("DOMContentLoaded", function () {
+        const modalEl = document.getElementById("imageEditorModal");
+    
+        if (modalEl) {
+            modalEl.addEventListener("hidden.bs.modal", function () {
+                if (typeof swiper !== "undefined" && swiper.autoplay) {
+                    swiper.autoplay.start(); // ▶ Restart autoplay
+                }
+            });
+        }
     });
 </script>
 
@@ -458,70 +485,7 @@
         });
     }
 </script>
-<script>
-    // Wait for the DOM to be fully loaded before running the script
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get references to the video, button, and icons
-        const video = document.getElementById('dancingVideo');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const playIcon = document.getElementById('playIcon');
-        const pauseIcon = document.getElementById('pauseIcon');
 
-        // Add a click event listener to the video to toggle play/pause
-        video.addEventListener('click', function() {
-            togglePlayPause();
-        });
-
-        // Add a click event listener to the button to toggle play/pause
-        playPauseBtn.addEventListener('click', function() {
-            togglePlayPause();
-        });
-
-        // Update button icons and visibility when the video starts playing
-        video.addEventListener('play', function() {
-            playIcon.style.display = 'none'; // Hide the play icon
-            pauseIcon.style.display = 'block'; // Show the pause icon
-            hideButton(); // Hide the button after 2 seconds
-        });
-
-        // Update button icons and visibility when the video is paused
-        video.addEventListener('pause', function() {
-            pauseIcon.style.display = 'none'; // Hide the pause icon
-            playIcon.style.display = 'block'; // Show the play icon
-            // hideButton(); // Hide the button after 2 seconds
-        });
-
-        // Show the button when hovering over the video
-        video.addEventListener('mouseenter', function() {
-            playPauseBtn.classList.remove('hidden'); // Remove the 'hidden' class
-        });
-
-        // Hide the button when not hovering over the video (if the video is playing)
-        video.addEventListener('mouseleave', function() {
-            if (!video.paused) { // Check if the video is playing
-                playPauseBtn.classList.add('hidden'); // Add the 'hidden' class
-            }
-        });
-
-        // Function to toggle between play and pause
-        function togglePlayPause() {
-            if (video.paused) { // If the video is paused
-                video.play(); // Play the video
-            } else { // If the video is playing
-                video.pause(); // Pause the video
-            }
-        }
-
-        // Function to hide the button after 2 seconds
-        // function hideButton() {
-        //     setTimeout(() => { // Delay execution by 2 seconds
-        //         if (!video.paused) { // Check if the video is still playing
-        //             playPauseBtn.classList.add('hidden'); // Hide the button
-        //         }
-        //     }, 2000); // 2000 milliseconds = 2 seconds
-        // }
-    });
-</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

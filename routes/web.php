@@ -171,6 +171,11 @@ Auth::routes();
 //===================== Front Routes =====================//
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/meme-generator', 'HomeController@meme_generator')->name('meme_generator');
+Route::post('/meme-generator/upload', 'HomeController@image_store')->name('upload.image');
+Route::get('/meme-generator/images', 'HomeController@getImages')->name('get.images');
+
 Route::get('/contact-us', 'HomeController@contact')->name('contact');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');

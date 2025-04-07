@@ -33,6 +33,8 @@ use Mail;
 use PDF;
 use Session;
 use View;
+use App\Models\Imagemodel;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -81,6 +83,53 @@ class HomeController extends Controller
         
         return view('welcome', compact('page', 'section', 'logo', 'address' , 'images'));
 
+    }
+    
+    public function meme_generator()
+    {
+        return view('meme');
+    }
+    
+    public function image_store(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|string'
+        ]);
+
+        $imageData = $request->image;
+
+        // Check if base64 string is valid
+        if (preg_match('/^data:image\/(\w+);base64,/', $imageData, $type)) {
+            $imageData = substr($imageData, strpos($imageData, ',') + 1);
+            $type = strtolower($type[1]); // jpg, png, gif, etc.
+
+            if (!in_array($type, ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {
+                return response()->json(['error' => 'Invalid image type'], 400);
+            }
+
+            $imageData = base64_decode($imageData);
+
+            if ($imageData === false) {
+                return response()->json(['error' => 'base64_decode failed'], 400);
+            }
+        } else {
+            return response()->json(['error' => 'Invalid base64 format'], 400);
+        }
+
+        $fileName = time() . '_' . Str::random(10) . '.' . $type;
+        file_put_contents(public_path("uploads/{$fileName}"), $imageData);
+
+        $image = new Imagemodel();
+        $image->path = "uploads/{$fileName}";
+        $image->save();
+
+        return response()->json(['path' => asset("uploads/{$fileName}")]);
+    }
+
+    public function getImages()
+    {
+        $images = Imagemodel::all()->pluck('path');
+        return response()->json($images->map(fn($path) => asset($path)));
     }
 
     public function search(Request $request)

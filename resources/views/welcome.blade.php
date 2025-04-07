@@ -1199,3 +1199,185 @@ alt="">
 
         <!--</div>-->
     @endsection
+    
+
+@section('js')
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('play-pause-button');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const seekBar = document.getElementById('seek-bar');
+    const timestamp = document.getElementById('timestamp');
+
+    // Function to toggle play/pause
+    function togglePlayPause() {
+        if (audio.paused) {
+            audio.play();
+            playPauseButton.setAttribute('aria-label', 'Pause');
+            playPauseButton.innerHTML = `
+                <svg width="18px" height="20px" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="currentcolor">
+                        <path d="M0,0 L6,0 L6,20 L0,20 Z M12,0 L18,0 L18,20 L12,20 Z"></path>
+                    </g>
+                </svg>
+            `; // Pause icon
+        } else {
+            audio.pause();
+            playPauseButton.setAttribute('aria-label', 'Play');
+            playPauseButton.innerHTML = `
+                <svg width="18px" height="20px" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="currentcolor">
+                        <path d="M17.29,9.02 C18.25,9.56 18.25,10.44 17.29,10.98 L1.74,19.78 C0.78,20.33 0,19.87 0,18.76 L0,1.24 C0,0.13 0.78,-0.32 1.74,0.22 L17.29,9.02 Z"></path>
+                    </g>
+                </svg>
+            `; // Play icon
+        }
+    }
+
+    // Add event listeners to both buttons
+    playPauseButton.addEventListener('click', togglePlayPause);
+    playBtn.addEventListener('click', togglePlayPause);
+
+    // Update progress bar and timestamp
+    audio.addEventListener('timeupdate', function () {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+
+        // Ensure duration is a valid number
+        if (duration > 0) {
+            const progressPercent = (currentTime / duration) * 100;
+
+            // Update progress bar and seek bar
+            progressBar.value = progressPercent;
+            seekBar.value = progressPercent;
+
+            // Update timestamp
+            const currentMinutes = Math.floor(currentTime / 60);
+            const currentSeconds = Math.floor(currentTime % 60);
+            const durationMinutes = Math.floor(duration / 60);
+            const durationSeconds = Math.floor(duration % 60);
+
+            timestamp.textContent = 
+                `${padTime(currentMinutes)}:${padTime(currentSeconds)} / ${padTime(durationMinutes)}:${padTime(durationSeconds)}`;
+        }
+    });
+
+    // Seek functionality
+    seekBar.addEventListener('input', function () {
+        const seekTime = (seekBar.value / 100) * audio.duration;
+        audio.currentTime = seekTime;
+    });
+
+    // Helper function to pad time values
+    function padTime(time) {
+        return time < 10 ? `0${time}` : time;
+    }
+});    
+    
+</script>
+<script>
+    // Wait for the DOM to be fully loaded before running the script
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get references to the video, button, and icons
+        const video = document.getElementById('dancingVideo');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+
+        // Add a click event listener to the video to toggle play/pause
+        video.addEventListener('click', function() {
+            togglePlayPause();
+        });
+
+        // Add a click event listener to the button to toggle play/pause
+        playPauseBtn.addEventListener('click', function() {
+            togglePlayPause();
+        });
+
+        // Update button icons and visibility when the video starts playing
+        video.addEventListener('play', function() {
+            playIcon.style.display = 'none'; // Hide the play icon
+            pauseIcon.style.display = 'block'; // Show the pause icon
+            hideButton(); // Hide the button after 2 seconds
+        });
+
+        // Update button icons and visibility when the video is paused
+        video.addEventListener('pause', function() {
+            pauseIcon.style.display = 'none'; // Hide the pause icon
+            playIcon.style.display = 'block'; // Show the play icon
+            // hideButton(); // Hide the button after 2 seconds
+        });
+
+        // Show the button when hovering over the video
+        video.addEventListener('mouseenter', function() {
+            playPauseBtn.classList.remove('hidden'); // Remove the 'hidden' class
+        });
+
+        // Hide the button when not hovering over the video (if the video is playing)
+        video.addEventListener('mouseleave', function() {
+            if (!video.paused) { // Check if the video is playing
+                playPauseBtn.classList.add('hidden'); // Add the 'hidden' class
+            }
+        });
+
+        // Function to toggle between play and pause
+        function togglePlayPause() {
+            if (video.paused) { // If the video is paused
+                video.play(); // Play the video
+            } else { // If the video is playing
+                video.pause(); // Pause the video
+            }
+        }
+
+        // Function to hide the button after 2 seconds
+        // function hideButton() {
+        //     setTimeout(() => { // Delay execution by 2 seconds
+        //         if (!video.paused) { // Check if the video is still playing
+        //             playPauseBtn.classList.add('hidden'); // Hide the button
+        //         }
+        //     }, 2000); // 2000 milliseconds = 2 seconds
+        // }
+    });
+    
+    $(document).ready(function() {
+    // Smooth scroll to the target section
+    $('.scroll-btn').click(function() {
+        $('.section').removeClass('hidden');
+        $('#main-parent').slideDown();
+        var target = $(this).data('target'); // Get the target section ID
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000); // Duration of the scroll (1000ms = 1 second)
+    });
+    
+      let lastScrollTop = $(window).scrollTop();
+    
+      $(window).on("scroll", function () {
+        let scrollTop = $(this).scrollTop();
+        let section2Top = $("#section2").offset().top;
+        let section2Height = $("#section2").outerHeight();
+    
+        // Detect if Section 2 is in viewport while scrolling up
+        if (
+          scrollTop < lastScrollTop && // Scrolling up
+          scrollTop >= section2Top - $(window).height() / 2 && // Section 2 enters viewport
+          scrollTop < section2Top + section2Height
+        ) {
+          hideOtherSections($("#section2")); // Hide other sections when Section 2 is in view
+        }
+    
+        lastScrollTop = scrollTop;
+      });
+    
+      // Function to hide all sections except the one in view
+      function hideOtherSections($visibleSection) {
+        $(".section").not($visibleSection).addClass("hidden");
+        $visibleSection.removeClass("hidden");
+      }
+    
+    });
+</script>
+@endsection
