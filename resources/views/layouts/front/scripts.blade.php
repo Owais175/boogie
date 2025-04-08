@@ -200,10 +200,15 @@
         let userImage = new Image();
         let templateImage = new Image();
         let isDragging = false;
-        let offsetX, offsetY, templateX = 50,
-            templateY = 50;
-        let templateWidth = 150,
-            templateHeight = 150;
+        let isResizing = false;
+        let isRotating = false;
+        let resizeHandleIndex = -1;
+        let templateX = 50, templateY = 50;
+        let templateWidth = 150, templateHeight = 150;
+        let offsetX, offsetY;
+        let rotationAngle = 0;
+        let rotationHandleDistance = 40;
+        let showControls = false; // Flag to control visibility of handles
 
         // Variables to track scaling and positioning
         let displayScale = 1;
@@ -231,6 +236,19 @@
             }
         });
 
+        // Resize handles positions (8 handles around the image)
+        const resizeHandles = [
+            { x: 0, y: 0, cursor: 'nw-resize' },    // top-left
+            { x: 0.5, y: 0, cursor: 'n-resize' },   // top-middle
+            { x: 1, y: 0, cursor: 'ne-resize' },     // top-right
+            { x: 1, y: 0.5, cursor: 'e-resize' },    // right-middle
+            { x: 1, y: 1, cursor: 'se-resize' },    // bottom-right
+            { x: 0.5, y: 1, cursor: 's-resize' },    // bottom-middle
+            { x: 0, y: 1, cursor: 'sw-resize' },     // bottom-left
+            { x: 0, y: 0.5, cursor: 'w-resize' }     // left-middle
+        ];
+        const handleSize = 8;
+
         function drawCanvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -244,32 +262,321 @@
             // Draw main image centered
             ctx.drawImage(userImage, displayOffsetX, displayOffsetY, imgWidth, imgHeight);
 
-            // Draw template image
-            ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
+            // Save the context state before transformations
+            ctx.save();
+
+            // Move to the center of the template image
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+            ctx.translate(centerX, centerY);
+
+            // Apply rotation
+            ctx.rotate(rotationAngle);
+
+            // Draw the template image centered around the rotation point
+            ctx.drawImage(
+                templateImage,
+                -templateWidth / 2,
+                -templateHeight / 2,
+                templateWidth,
+                templateHeight
+            );
+
+            // Restore the context state
+            ctx.restore();
+
+            // Draw resize handles and rotation handle if controls are visible
+            if (showControls) {
+                drawHandles();
+            }
+        }
+
+        function drawHandles() {
+            ctx.save();
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 2;
+            ctx.fillStyle = '#4285f4';
+
+            // Calculate center of template image
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+
+            // Draw a border around the template image (accounting for rotation)
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(rotationAngle);
+            ctx.strokeRect(-templateWidth / 2, -templateHeight / 2, templateWidth, templateHeight);
+            ctx.restore();
+
+            // Draw resize handles
+            resizeHandles.forEach(handle => {
+                // Calculate handle position accounting for rotation
+                const handleX = templateX + (handle.x * templateWidth);
+                const handleY = templateY + (handle.y * templateHeight);
+
+                // Transform handle position based on rotation
+                const rotatedHandle = rotatePoint(handleX, handleY, centerX, centerY, rotationAngle);
+
+                ctx.fillRect(rotatedHandle.x - handleSize/2, rotatedHandle.y - handleSize/2, handleSize, handleSize);
+                ctx.strokeRect(rotatedHandle.x - handleSize/2, rotatedHandle.y - handleSize/2, handleSize, handleSize);
+            });
+
+            // Draw rotation handle (above the image)
+            const rotationHandleX = centerX;
+            const rotationHandleY = centerY - rotationHandleDistance;
+            const rotatedHandle = rotatePoint(rotationHandleX, rotationHandleY, centerX, centerY, rotationAngle);
+
+            ctx.beginPath();
+            ctx.arc(rotatedHandle.x, rotatedHandle.y, handleSize, 0, Math.PI * 2);
+            ctx.fillStyle = '#ff5722'; // Orange color for rotation handle
+            ctx.fill();
+            ctx.stroke();
+
+            // Draw line from center to rotation handle
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.lineTo(rotatedHandle.x, rotatedHandle.y);
+            ctx.strokeStyle = '#ffffff';
+            ctx.stroke();
+
+            ctx.restore();
+        }
+
+        // Helper function to rotate a point around another point
+        function rotatePoint(x, y, cx, cy, angle) {
+            const cos = Math.cos(angle);
+            const sin = Math.sin(angle);
+            const nx = (cos * (x - cx)) - (sin * (y - cy)) + cx;
+            const ny = (sin * (x - cx)) + (cos * (y - cy)) + cy;
+            return { x: nx, y: ny };
+        }
+
+        function getHandleAtPosition(x, y) {
+            if (!showControls) return null;
+
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+
+            // Rotation handle position (before rotation)
+            const rotationHandleX = centerX;
+            const rotationHandleY = centerY - rotationHandleDistance;
+
+            // Rotated position of rotation handle
+            const rotatedHandle = rotatePoint(rotationHandleX, rotationHandleY, centerX, centerY, rotationAngle);
+
+            // Check if mouse is on rotation handle
+            if (Math.hypot(x - rotatedHandle.x, y - rotatedHandle.y) <= handleSize) {
+                return 'rotation';
+            }
+
+            // Then check resize handles
+            for (let i = 0; i < resizeHandles.length; i++) {
+                const handle = resizeHandles[i];
+                const handleX = templateX + (handle.x * templateWidth);
+                const handleY = templateY + (handle.y * templateHeight);
+
+                // Rotated position of resize handle
+                const rotatedHandle = rotatePoint(handleX, handleY, centerX, centerY, rotationAngle);
+
+                if (Math.abs(x - rotatedHandle.x) <= handleSize && Math.abs(y - rotatedHandle.y) <= handleSize) {
+                    return i;
+                }
+            }
+
+            // Finally check if inside the image (for dragging)
+            const relX = x - centerX;
+            const relY = y - centerY;
+
+            // Rotate the point back to check against unrotated rectangle
+            const unrotatedX = Math.cos(-rotationAngle) * relX - Math.sin(-rotationAngle) * relY;
+            const unrotatedY = Math.sin(-rotationAngle) * relX + Math.cos(-rotationAngle) * relY;
+
+            if (Math.abs(unrotatedX) <= templateWidth/2 && Math.abs(unrotatedY) <= templateHeight/2) {
+                return 'drag';
+            }
+
+            return null;
+        }
+
+        function isPointInImage(x, y) {
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+
+            const relX = x - centerX;
+            const relY = y - centerY;
+
+            // Rotate the point back to check against unrotated rectangle
+            const unrotatedX = Math.cos(-rotationAngle) * relX - Math.sin(-rotationAngle) * relY;
+            const unrotatedY = Math.sin(-rotationAngle) * relX + Math.cos(-rotationAngle) * relY;
+
+            return Math.abs(unrotatedX) <= templateWidth/2 && Math.abs(unrotatedY) <= templateHeight/2;
+        }
+
+        function resizeTemplate(handleIndex, mouseX, mouseY) {
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+
+            // Rotate mouse coordinates back to unrotated space
+            const relX = mouseX - centerX;
+            const relY = mouseY - centerY;
+            const unrotatedX = Math.cos(-rotationAngle) * relX - Math.sin(-rotationAngle) * relY;
+            const unrotatedY = Math.sin(-rotationAngle) * relX + Math.cos(-rotationAngle) * relY;
+            const unrotatedMouseX = unrotatedX + centerX;
+            const unrotatedMouseY = unrotatedY + centerY;
+
+            const startWidth = templateWidth;
+            const startHeight = templateHeight;
+            const startX = templateX;
+            const startY = templateY;
+
+            switch (handleIndex) {
+                case 0: // top-left
+                    templateWidth = startWidth + (startX - unrotatedMouseX);
+                    templateHeight = startHeight + (startY - unrotatedMouseY);
+                    if (templateWidth > 10) templateX = unrotatedMouseX;
+                    if (templateHeight > 10) templateY = unrotatedMouseY;
+                    break;
+                case 1: // top-middle
+                    templateHeight = startHeight + (startY - unrotatedMouseY);
+                    if (templateHeight > 10) templateY = unrotatedMouseY;
+                    break;
+                case 2: // top-right
+                    templateWidth = unrotatedMouseX - startX;
+                    templateHeight = startHeight + (startY - unrotatedMouseY);
+                    if (templateHeight > 10) templateY = unrotatedMouseY;
+                    break;
+                case 3: // right-middle
+                    templateWidth = unrotatedMouseX - startX;
+                    break;
+                case 4: // bottom-right
+                    templateWidth = unrotatedMouseX - startX;
+                    templateHeight = unrotatedMouseY - startY;
+                    break;
+                case 5: // bottom-middle
+                    templateHeight = unrotatedMouseY - startY;
+                    break;
+                case 6: // bottom-left
+                    templateWidth = startWidth + (startX - unrotatedMouseX);
+                    templateHeight = unrotatedMouseY - startY;
+                    if (templateWidth > 10) templateX = unrotatedMouseX;
+                    break;
+                case 7: // left-middle
+                    templateWidth = startWidth + (startX - unrotatedMouseX);
+                    if (templateWidth > 10) templateX = unrotatedMouseX;
+                    break;
+            }
+
+            // Maintain aspect ratio if shift key is pressed
+            if (event.shiftKey) {
+                const aspectRatio = startWidth / startHeight;
+                if (handleIndex === 0 || handleIndex === 2 || handleIndex === 4 || handleIndex === 6) {
+                    // Corner handles
+                    templateHeight = templateWidth / aspectRatio;
+                    if (handleIndex === 0 || handleIndex === 6) {
+                        templateY = startY + (startHeight - templateHeight);
+                    }
+                }
+            }
+
+            // Minimum size constraint
+            if (templateWidth < 10) templateWidth = 10;
+            if (templateHeight < 10) templateHeight = 10;
+        }
+
+        function rotateTemplate(mouseX, mouseY) {
+            const centerX = templateX + templateWidth / 2;
+            const centerY = templateY + templateHeight / 2;
+
+            // Calculate angle between center and mouse position
+            const dx = mouseX - centerX;
+            const dy = mouseY - centerY;
+            rotationAngle = Math.atan2(dy, dx) + Math.PI/2; // +90° so handle is at top
         }
 
         canvas.addEventListener("mousedown", (e) => {
-            let mouseX = e.offsetX;
-            let mouseY = e.offsetY;
+            const mouseX = e.offsetX;
+            const mouseY = e.offsetY;
 
-            if (mouseX >= templateX && mouseX <= templateX + templateWidth &&
-                mouseY >= templateY && mouseY <= templateY + templateHeight) {
+            // Check if we're clicking on the image or its handles
+            const handle = showControls ? getHandleAtPosition(mouseX, mouseY) : null;
+            const isInsideImage = isPointInImage(mouseX, mouseY);
+
+            if (handle === 'rotation') {
+                isRotating = true;
+                e.preventDefault();
+                e.stopPropagation();
+                return;
+            } else if (typeof handle === 'number') {
+                isResizing = true;
+                resizeHandleIndex = handle;
+                e.preventDefault();
+                e.stopPropagation();
+                return;
+            } else if (isInsideImage) {
+                // Clicked on the image - show controls if they weren't visible
+                if (!showControls) {
+                    showControls = true;
+                    drawCanvas();
+                }
                 isDragging = true;
                 offsetX = mouseX - templateX;
                 offsetY = mouseY - templateY;
+                canvas.style.cursor = 'move';
+            } else {
+                // Clicked outside - hide controls if they were visible
+                if (showControls) {
+                    showControls = false;
+                    drawCanvas();
+                }
             }
         });
 
         canvas.addEventListener("mousemove", (e) => {
-            if (isDragging) {
-                templateX = e.offsetX - offsetX;
-                templateY = e.offsetY - offsetY;
+            const mouseX = e.offsetX;
+            const mouseY = e.offsetY;
+
+            // Update cursor style when hovering over handles or image
+            if (!isDragging && !isResizing && !isRotating) {
+                if (showControls) {
+                    const handle = getHandleAtPosition(mouseX, mouseY);
+
+                    if (handle === 'rotation') {
+                        canvas.style.cursor = 'grab';
+                    } else if (typeof handle === 'number') {
+                        canvas.style.cursor = resizeHandles[handle].cursor;
+                    } else if (handle === 'drag') {
+                        canvas.style.cursor = 'move';
+                    } else {
+                        canvas.style.cursor = 'default';
+                    }
+                } else if (isPointInImage(mouseX, mouseY)) {
+                    canvas.style.cursor = 'pointer';
+                } else {
+                    canvas.style.cursor = 'default';
+                }
+            }
+
+            if (isRotating) {
+                rotateTemplate(mouseX, mouseY);
+                drawCanvas();
+            } else if (isResizing) {
+                resizeTemplate(resizeHandleIndex, mouseX, mouseY);
+                drawCanvas();
+            } else if (isDragging) {
+                templateX = mouseX - offsetX;
+                templateY = mouseY - offsetY;
                 drawCanvas();
             }
         });
 
         ["mouseup", "mouseleave", "mouseout"].forEach(eventType => {
-            canvas.addEventListener(eventType, () => isDragging = false);
+            canvas.addEventListener(eventType, () => {
+                isDragging = false;
+                isResizing = false;
+                isRotating = false;
+                resizeHandleIndex = -1;
+                canvas.style.cursor = 'default';
+            });
         });
 
         window.downloadImage = function() {
@@ -285,19 +592,27 @@
             tempCtx.drawImage(userImage, 0, 0, userImage.width, userImage.height);
 
             // Calculate template position in original image coordinates
-            const originalX = (templateX - displayOffsetX) / displayScale;
-            const originalY = (templateY - displayOffsetY) / displayScale;
+            const originalCenterX = (templateX + templateWidth/2 - displayOffsetX) / displayScale;
+            const originalCenterY = (templateY + templateHeight/2 - displayOffsetY) / displayScale;
             const originalWidth = templateWidth / displayScale;
             const originalHeight = templateHeight / displayScale;
 
-            // Draw template in correct position
+            // Save context and apply transformations
+            tempCtx.save();
+            tempCtx.translate(originalCenterX, originalCenterY);
+            tempCtx.rotate(rotationAngle);
+
+            // Draw the template image centered around the rotation point
             tempCtx.drawImage(
                 templateImage,
-                originalX,
-                originalY,
+                -originalWidth / 2,
+                -originalHeight / 2,
                 originalWidth,
                 originalHeight
             );
+
+            // Restore context
+            tempCtx.restore();
 
             link.download = "edited_image.png";
             link.href = tempCanvas.toDataURL();
