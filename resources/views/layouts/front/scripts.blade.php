@@ -128,181 +128,209 @@
 </script>
 
 <script>
-(function() {
-    const uploadInput = document.getElementById('uploadImage');
-    if (!uploadInput) return; // Now this return is valid, inside a function
+    (function() {
+        const uploadInput = document.getElementById('uploadImage');
+        if (!uploadInput) return; // Now this return is valid, inside a function
 
-    uploadInput.addEventListener('change', function(event) {
-        let previewContainer = document.getElementById('imagePreview');
-        previewContainer.innerHTML = "";
+        uploadInput.addEventListener('change', function(event) {
+            let previewContainer = document.getElementById('imagePreview');
+            previewContainer.innerHTML = "";
 
-        let files = Array.from(event.target.files);
-        let dataTransfer = new DataTransfer();
+            let files = Array.from(event.target.files);
+            let dataTransfer = new DataTransfer();
 
-        files.forEach((file, index) => {
-            let reader = new FileReader();
-            reader.onload = function(e) {
-                let previewDiv = document.createElement('div');
-                previewDiv.style.position = "relative";
-                previewDiv.style.display = "inline-block";
-                previewDiv.style.marginRight = "10px";
+            files.forEach((file, index) => {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    let previewDiv = document.createElement('div');
+                    previewDiv.style.position = "relative";
+                    previewDiv.style.display = "inline-block";
+                    previewDiv.style.marginRight = "10px";
 
-                let img = document.createElement('img');
-                img.src = e.target.result;
-                img.style.width = "230px";
-                img.style.height = "120px";
-                img.style.objectFit = "cover";
-                img.style.border = "1px solid #ccc";
-                img.style.borderRadius = "5px";
+                    let img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.width = "230px";
+                    img.style.height = "120px";
+                    img.style.objectFit = "cover";
+                    img.style.border = "1px solid #ccc";
+                    img.style.borderRadius = "5px";
 
-                let removeBtn = document.createElement('button');
-                removeBtn.innerHTML = "✖";
-                removeBtn.style.position = "absolute";
-                removeBtn.style.top = "5px";
-                removeBtn.style.right = "5px";
-                removeBtn.style.background = "white";
-                removeBtn.style.color = "white";
-                removeBtn.style.border = "none";
-                removeBtn.style.cursor = "pointer";
-                removeBtn.style.borderRadius = "50%";
-                removeBtn.style.width = "26px";
-                removeBtn.style.height = "26px";
-                removeBtn.style.fontSize = "12px";
+                    let removeBtn = document.createElement('button');
+                    removeBtn.innerHTML = "✖";
+                    removeBtn.style.position = "absolute";
+                    removeBtn.style.top = "5px";
+                    removeBtn.style.right = "5px";
+                    removeBtn.style.background = "white";
+                    removeBtn.style.color = "white";
+                    removeBtn.style.border = "none";
+                    removeBtn.style.cursor = "pointer";
+                    removeBtn.style.borderRadius = "50%";
+                    removeBtn.style.width = "26px";
+                    removeBtn.style.height = "26px";
+                    removeBtn.style.fontSize = "12px";
 
-                removeBtn.addEventListener("click", function() {
-                    previewDiv.remove();
-                    files.splice(index, 1);
-                    dataTransfer.items.clear();
-                    files.forEach(f => dataTransfer.items.add(f));
-                    uploadInput.files = dataTransfer.files;
-                });
+                    removeBtn.addEventListener("click", function() {
+                        previewDiv.remove();
+                        files.splice(index, 1);
+                        dataTransfer.items.clear();
+                        files.forEach(f => dataTransfer.items.add(f));
+                        uploadInput.files = dataTransfer.files;
+                    });
 
-                previewDiv.appendChild(img);
-                previewDiv.appendChild(removeBtn);
-                previewContainer.appendChild(previewDiv);
-            };
-            reader.readAsDataURL(file);
-            dataTransfer.items.add(file);
-        });
-
-        uploadInput.files = dataTransfer.files;
-    });
-})();
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    let canvas = document.getElementById("imageCanvas");
-    if (!canvas) return; // Exit script if canvas is not found
-
-    let ctx = canvas.getContext("2d");
-    let userImage = new Image();
-    let templateImage = new Image();
-    let isDragging = false;
-    let offsetX, offsetY, templateX = 50, templateY = 50;
-    let templateWidth = 150, templateHeight = 150;
-
-    canvas.width = 500;
-    canvas.height = 500;
-
-    document.getElementById("uploadImage")?.addEventListener("change", function(event) {
-        let file = event.target.files[0];
-        if (file) {
-            let reader = new FileReader();
-            reader.onload = function(e) {
-                userImage.onload = () => {
-                    drawCanvas();
-                    new bootstrap.Modal(document.getElementById("imageEditorModal")).show();
+                    previewDiv.appendChild(img);
+                    previewDiv.appendChild(removeBtn);
+                    previewContainer.appendChild(previewDiv);
                 };
-                userImage.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+                reader.readAsDataURL(file);
+                dataTransfer.items.add(file);
+            });
 
-    function drawCanvas() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        let scale = Math.min(canvas.width / userImage.width, canvas.height / userImage.height);
-        let imgWidth = userImage.width * scale;
-        let imgHeight = userImage.height * scale;
-        let imgX = (canvas.width - imgWidth) / 2;
-        let imgY = (canvas.height - imgHeight) / 2;
-
-        ctx.drawImage(userImage, imgX, imgY, imgWidth, imgHeight);
-        ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
-    }
-
-    canvas.addEventListener("mousedown", (e) => {
-        let mouseX = e.offsetX;
-        let mouseY = e.offsetY;
-
-        if (mouseX >= templateX && mouseX <= templateX + templateWidth &&
-            mouseY >= templateY && mouseY <= templateY + templateHeight) {
-            isDragging = true;
-            offsetX = mouseX - templateX;
-            offsetY = mouseY - templateY;
-        }
-    });
-
-    canvas.addEventListener("mousemove", (e) => {
-        if (isDragging) {
-            templateX = e.offsetX - offsetX;
-            templateY = e.offsetY - offsetY;
-            drawCanvas();
-        }
-    });
-
-    ["mouseup", "mouseleave", "mouseout"].forEach(eventType => {
-        canvas.addEventListener(eventType, () => isDragging = false);
-    });
-
-    window.downloadImage = function() {
-        let link = document.createElement("a");
-
-        let tempCanvas = document.createElement("canvas");
-        let tempCtx = tempCanvas.getContext("2d");
-        tempCanvas.width = userImage.width;
-        tempCanvas.height = userImage.height;
-
-        tempCtx.drawImage(userImage, 0, 0, userImage.width, userImage.height);
-
-        let pngScale = userImage.width / canvas.width;
-        tempCtx.drawImage(templateImage, templateX * pngScale, templateY * pngScale, templateWidth * pngScale,
-            templateHeight * pngScale);
-
-        link.download = "edited_image.png";
-        link.href = tempCanvas.toDataURL();
-        link.click();
-    }
-});
+            uploadInput.files = dataTransfer.files;
+        });
+    })();
 </script>
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Create a new IntersectionObserver instance
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            } else {
-                entry.target.classList.remove('in-view');
+    document.addEventListener("DOMContentLoaded", function() {
+        let canvas = document.getElementById("imageCanvas");
+        if (!canvas) return;
+
+        let ctx = canvas.getContext("2d");
+        let userImage = new Image();
+        let templateImage = new Image();
+        let isDragging = false;
+        let offsetX, offsetY, templateX = 50,
+            templateY = 50;
+        let templateWidth = 150,
+            templateHeight = 150;
+
+        // Variables to track scaling and positioning
+        let displayScale = 1;
+        let displayOffsetX = 0;
+        let displayOffsetY = 0;
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        // Set template image source
+        templateImage.src = "{{ asset('assets/images/sunglasses.png') }}";
+
+        document.getElementById("uploadImage")?.addEventListener("change", function(event) {
+            let file = event.target.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    userImage.onload = () => {
+                        drawCanvas();
+                        new bootstrap.Modal(document.getElementById("imageEditorModal")).show();
+                    };
+                    userImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
             }
         });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the section is in view
+
+        function drawCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Calculate scaling to fit image in canvas
+            displayScale = Math.min(canvas.width / userImage.width, canvas.height / userImage.height);
+            let imgWidth = userImage.width * displayScale;
+            let imgHeight = userImage.height * displayScale;
+            displayOffsetX = (canvas.width - imgWidth) / 2;
+            displayOffsetY = (canvas.height - imgHeight) / 2;
+
+            // Draw main image centered
+            ctx.drawImage(userImage, displayOffsetX, displayOffsetY, imgWidth, imgHeight);
+
+            // Draw template image
+            ctx.drawImage(templateImage, templateX, templateY, templateWidth, templateHeight);
+        }
+
+        canvas.addEventListener("mousedown", (e) => {
+            let mouseX = e.offsetX;
+            let mouseY = e.offsetY;
+
+            if (mouseX >= templateX && mouseX <= templateX + templateWidth &&
+                mouseY >= templateY && mouseY <= templateY + templateHeight) {
+                isDragging = true;
+                offsetX = mouseX - templateX;
+                offsetY = mouseY - templateY;
+            }
+        });
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (isDragging) {
+                templateX = e.offsetX - offsetX;
+                templateY = e.offsetY - offsetY;
+                drawCanvas();
+            }
+        });
+
+        ["mouseup", "mouseleave", "mouseout"].forEach(eventType => {
+            canvas.addEventListener(eventType, () => isDragging = false);
+        });
+
+        window.downloadImage = function() {
+            let link = document.createElement("a");
+            let tempCanvas = document.createElement("canvas");
+            let tempCtx = tempCanvas.getContext("2d");
+
+            // Use original image dimensions
+            tempCanvas.width = userImage.width;
+            tempCanvas.height = userImage.height;
+
+            // Draw original image
+            tempCtx.drawImage(userImage, 0, 0, userImage.width, userImage.height);
+
+            // Calculate template position in original image coordinates
+            const originalX = (templateX - displayOffsetX) / displayScale;
+            const originalY = (templateY - displayOffsetY) / displayScale;
+            const originalWidth = templateWidth / displayScale;
+            const originalHeight = templateHeight / displayScale;
+
+            // Draw template in correct position
+            tempCtx.drawImage(
+                templateImage,
+                originalX,
+                originalY,
+                originalWidth,
+                originalHeight
+            );
+
+            link.download = "edited_image.png";
+            link.href = tempCanvas.toDataURL();
+            link.click();
+        };
     });
+</script>
 
-    // Select the section element
-    const section = document.getElementById('animated-sec');
 
-    // Only observe if section exists
-    if (section) {
-        observer.observe(section);
-    }
-});
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Create a new IntersectionObserver instance
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the section is in view
+        });
+
+        // Select the section element
+        const section = document.getElementById('animated-sec');
+
+        // Only observe if section exists
+        if (section) {
+            observer.observe(section);
+        }
+    });
 </script>
 
 
@@ -340,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (nextSlide) {
                         const meme_img = nextSlide.querySelector('img');
                         if (meme_img) {
-                            templateImage.src = meme_img.src;
+                            templateImage.src = "assets/images/Gecko-hoodie-and-glasses.png";
                         }
                     }
                 }, 100);
@@ -349,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
     // ✅ Stop Swiper autoplay when clicking the label
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         const stopBtn = document.querySelector(".stop_slider");
         if (stopBtn) {
             stopBtn.addEventListener("click", function() {
@@ -361,11 +389,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ✅ Restart Swiper autoplay when modal is closed
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         const modalEl = document.getElementById("imageEditorModal");
 
         if (modalEl) {
-            modalEl.addEventListener("hidden.bs.modal", function () {
+            modalEl.addEventListener("hidden.bs.modal", function() {
                 if (typeof swiper !== "undefined" && swiper.autoplay) {
                     swiper.autoplay.start(); // ▶ Restart autoplay
                 }

@@ -836,7 +836,7 @@
                             </form>
                             </div> --}}
 
-                            {{-- <div class="col-lg-12">
+                            <div class="col-lg-12">
                                 <div class="custom-image-bropper" style="cursor: pointer">
                                     <form action="{{ route('gallery_images') }}" method="POST"
                                         enctype="multipart/form-data" id="img_push">
@@ -850,9 +850,9 @@
                                                 <span class="filepond--label-action" style="color: #fff" tabindex="0">
                                                     Generator</span>
                                                 </label>
-                                                <div id="imagePreview" style="margin-top: 10px"></div>
+                                                <p>Take a photo op with Boogie!</p>
                                             </div>
-                                            <p>Take a photo op with Boogie!</p>
+                                            <div id="imagePreview" style="margin-top: 10px"></div>
                                             <input type="file" accept="image/png, image/jpeg, image/gif"
                                                 class="filepond visually-hidden stop_slider" id="uploadImage"
                                                 name="images[]" multiple data-max-file-size="50MB" data-max-files="5" />
@@ -868,27 +868,22 @@
 
 
                             <!-- Bootstrap Modal -->
-                            <div class="modal fade" id="imageEditorModal" tabindex="-1"
-                                aria-labelledby="imageEditorModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
+                            <div class="modal fade" id="imageEditorModal" tabindex="-1" aria-labelledby="imageEditorModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content" style="background-color: #1f1f1f; color: white;">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Edit Your Image</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                                            <h5 class="modal-title" id="imageEditorModalLabel">Edit Your Image</h5>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-center">
-                                            <canvas id="imageCanvas" height="100px" width="100"></canvas>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-success"
-                                                onclick="formpush()">Upload</button>
-                                            <button type="button" class="btn btn-success"
-                                                onclick="downloadImage()">Download Image</button>
+                                            <canvas id="imageCanvas"></canvas>
+                                            <div class="mt-3">
+                                                <button class="btn btn-success" onclick="downloadImage()">Download Image</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
