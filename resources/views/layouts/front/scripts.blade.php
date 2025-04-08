@@ -20,6 +20,8 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 <script>
@@ -361,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ✅ Restart Swiper autoplay when modal is closed
     document.addEventListener("DOMContentLoaded", function () {
         const modalEl = document.getElementById("imageEditorModal");
-    
+
         if (modalEl) {
             modalEl.addEventListener("hidden.bs.modal", function () {
                 if (typeof swiper !== "undefined" && swiper.autoplay) {
