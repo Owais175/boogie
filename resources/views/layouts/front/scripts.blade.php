@@ -12,7 +12,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
-
+<!-- Bootstrap 5 JS (required for modal) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Dropify JS -->
 <script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
 
@@ -127,7 +128,7 @@
     }
 </script>
 
-<script>
+{{-- <script>
     (function() {
         const uploadInput = document.getElementById('uploadImage');
         if (!uploadInput) return; // Now this return is valid, inside a function
@@ -188,8 +189,27 @@
             uploadInput.files = dataTransfer.files;
         });
     })();
-</script>
+</script> --}}
 
+{{-- <script>
+    // Your existing JavaScript code here
+    document.addEventListener("DOMContentLoaded", function() {
+        // console.log(315)
+        // ... [all your existing JavaScript code] ...
+        
+        // Make sure Bootstrap JS is loaded for the modal to work
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            // This is already in your code where you show the modal
+            // new bootstrap.Modal(document.getElementById("imageEditorModal")).show();
+            
+            // The close button will work automatically because:
+            // 1. It has `data-bs-dismiss="modal"` attribute
+            // 2. Bootstrap's JavaScript is loaded
+        } else {
+            console.error("Bootstrap JS is not loaded. Modal close button won't work.");
+        }
+    });
+</script> --}}
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
