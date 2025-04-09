@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Load template images
     templates[0].img.src = "{{ asset('assets/images/sunglasses.png') }}";
-    templates[1].img.src = "{{ asset('assets/images/thumbs up_0_]1741661810.png') }}";
+    templates[1].img.src = "{{ asset('assets/images/thumbs.png') }}";
     
     let isDragging = false;
     let isResizing = false;
