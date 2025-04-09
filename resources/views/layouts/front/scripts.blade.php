@@ -373,7 +373,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const rotatedHandle = rotatePoint(rotationHandleX, rotationHandleY, centerX, centerY, template.rotation);
                 
                 if (Math.hypot(x - rotatedHandle.x, y - rotatedHandle.y) <= handleSize) {
-                    currentTemplate = template;
                     return { type: 'rotation', template: template };
                 }
 
@@ -385,7 +384,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     const rotatedHandle = rotatePoint(handleX, handleY, centerX, centerY, template.rotation);
 
                     if (Math.abs(x - rotatedHandle.x) <= handleSize && Math.abs(y - rotatedHandle.y) <= handleSize) {
-                        currentTemplate = template;
                         return { type: 'resize', index: j, template: template };
                     }
                 }
@@ -397,8 +395,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 const unrotatedY = Math.sin(-template.rotation) * relX + Math.cos(-template.rotation) * relY;
 
                 if (Math.abs(unrotatedX) <= template.width/2 && Math.abs(unrotatedY) <= template.height/2) {
-                    currentTemplate = template;
                     return { type: 'drag', template: template };
+                }
+            }
+        }
+        return null;
+    }
+
+    function isPointInAnyTemplate(x, y) {
+        for (let i = 0; i < templates.length; i++) {
+            const template = templates[i];
+            if (template.active && template.img.complete) {
+                const centerX = template.x + template.width / 2;
+                const centerY = template.y + template.height / 2;
+                const relX = x - centerX;
+                const relY = y - centerY;
+                const unrotatedX = Math.cos(-template.rotation) * relX - Math.sin(-template.rotation) * relY;
+                const unrotatedY = Math.sin(-template.rotation) * relX + Math.cos(-template.rotation) * relY;
+
+                if (Math.abs(unrotatedX) <= template.width/2 && Math.abs(unrotatedY) <= template.height/2) {
+                    return template;
                 }
             }
         }
@@ -486,40 +502,46 @@ document.addEventListener("DOMContentLoaded", function() {
         const mouseY = e.offsetY;
         const handle = getHandleAtPosition(mouseX, mouseY);
 
-        if (!handle) {
-            // Clicked outside - hide all controls
-            let controlsChanged = false;
-            templates.forEach(template => {
-                if (template.controlsVisible) {
-                    template.controlsVisible = false;
-                    controlsChanged = true;
-                }
-            });
-            if (controlsChanged) {
-                currentTemplate = null;
-                drawCanvas();
+        if (handle) {
+            currentTemplate = handle.template;
+            
+            if (handle.type === 'rotation') {
+                isRotating = true;
+            } else if (handle.type === 'resize') {
+                isResizing = true;
+                resizeHandleIndex = handle.index;
+            } else if (handle.type === 'drag') {
+                isDragging = true;
+                offsetX = mouseX - currentTemplate.x;
+                offsetY = mouseY - currentTemplate.y;
             }
-            return;
-        }
-
-        currentTemplate = handle.template;
-
-        if (handle.type === 'rotation') {
-            isRotating = true;
-        } else if (handle.type === 'resize') {
-            isResizing = true;
-            resizeHandleIndex = handle.index;
-        } else if (handle.type === 'drag') {
-            isDragging = true;
-            offsetX = mouseX - currentTemplate.x;
-            offsetY = mouseY - currentTemplate.y;
-        }
-
-        // Show controls for this template if they weren't visible
-        if (!currentTemplate.controlsVisible) {
-            templates.forEach(template => template.controlsVisible = false);
-            currentTemplate.controlsVisible = true;
-            drawCanvas();
+        } else {
+            // Check if clicked on any template (without controls visible)
+            const clickedTemplate = isPointInAnyTemplate(mouseX, mouseY);
+            if (clickedTemplate) {
+                // Hide controls for all other templates
+                templates.forEach(t => t.controlsVisible = false);
+                // Show controls for clicked template
+                clickedTemplate.controlsVisible = true;
+                currentTemplate = clickedTemplate;
+                isDragging = true;
+                offsetX = mouseX - currentTemplate.x;
+                offsetY = mouseY - currentTemplate.y;
+                drawCanvas();
+            } else {
+                // Clicked outside - hide all controls
+                let controlsChanged = false;
+                templates.forEach(template => {
+                    if (template.controlsVisible) {
+                        template.controlsVisible = false;
+                        controlsChanged = true;
+                    }
+                });
+                if (controlsChanged) {
+                    currentTemplate = null;
+                    drawCanvas();
+                }
+            }
         }
 
         e.preventDefault();
@@ -539,20 +561,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 canvas.style.cursor = 'move';
             } else {
                 // Check if mouse is over any template (without controls)
-                const overTemplate = templates.some(template => {
-                    if (!template.active || !template.img.complete) return false;
-                    
-                    const centerX = template.x + template.width / 2;
-                    const centerY = template.y + template.height / 2;
-                    const relX = mouseX - centerX;
-                    const relY = mouseY - centerY;
-                    const unrotatedX = Math.cos(-template.rotation) * relX - Math.sin(-template.rotation) * relY;
-                    const unrotatedY = Math.sin(-template.rotation) * relX + Math.cos(-template.rotation) * relY;
-
-                    return Math.abs(unrotatedX) <= template.width/2 && 
-                           Math.abs(unrotatedY) <= template.height/2;
-                });
-                
+                const overTemplate = isPointInAnyTemplate(mouseX, mouseY);
                 canvas.style.cursor = overTemplate ? 'pointer' : 'default';
             }
         }
