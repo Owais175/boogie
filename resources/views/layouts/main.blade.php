@@ -28,6 +28,27 @@
         canvas { border: 1px solid #ccc; cursor: grab; }
         #container { text-align: center; margin-top: 20px; }
     </style> -->
+
+    <style>
+        #imageCanvas {
+            touch-action: none;
+            max-width: 100%;
+            height: auto;
+            background-color: #f0f0f0;
+        }
+
+        /* Make handles bigger for touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            #imageCanvas {
+                --handle-size: 15px;
+            }
+        }
+
+        .btn-close-white {
+            filter: invert(1);
+        }
+    </style>
+    
     <style>
         a.filepond--credits {
             display: none !important;
