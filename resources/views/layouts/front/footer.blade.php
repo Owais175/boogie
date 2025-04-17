@@ -93,7 +93,8 @@
                 <ul class="footer-first-child footer-third-child">
                     <li>
                         <h6>
-                            <a href="assets/images/Boogie-Whitepaper-RT.pdf" target="_blank">
+                            <a href="assets/images/BoogieWhitepaperRT-Copy 2_0__1744229977_0_]1744914888.pdf"
+                                target="_blank">
                                 Whitepaper
                             </a>
                         </h6>
