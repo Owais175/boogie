@@ -54,8 +54,8 @@
                     <div class="boogie-img">
                         <div class="left-eye">
                             {{-- <img src="{!! $section[23]->value !!}" class="img-fluid"> --}}
-                            <img src="{{ asset('assets/images/b8489a_cde2db31d92d4d7d8cb37fccf7675dd9~mv2.gif') }}"
-                                class="img-fluid">
+                            <!--<img src="{{ asset('assets/images/b8489a_cde2db31d92d4d7d8cb37fccf7675dd9~mv2.gif') }}"-->
+                            <!--    class="img-fluid">-->
                         </div>
                         <figure>
                             <img src="{!! $page->image !!}" class="img-fluid" alt="">

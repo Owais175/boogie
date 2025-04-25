@@ -106,6 +106,27 @@
                             </a>
                         </h6>
                     </li>
+                    <li>
+                        <h6>
+                            <a href="https://docs.pinksale.finance/Boogie-KYC-Verification-1bed7dc69b3e801597b6f90cc8b4fbf1">
+                                KYC
+                            </a>
+                        </h6>
+                    </li>
+                    <li>
+                        <h6>
+                            <a href="https://app.analytixaudit.com/boogie">
+                                Audit
+                            </a>
+                        </h6>
+                    </li>
+                    <li>
+                        <h6>
+                            <a href="https://www.boogietoken.com/portfolio">
+                                Logo
+                            </a>
+                        </h6>
+                    </li>
                     {{-- <li>
                         <h6>
                             <a href="{{route('home')}}">
