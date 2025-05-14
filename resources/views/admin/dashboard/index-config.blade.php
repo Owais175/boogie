@@ -47,6 +47,7 @@
                                             $_getService = DB::table('m_flag')->where('is_active', '1')->where('is_config', '1')->where('id', 1980)->first();
                                             ?>
                                             @foreach ($_getConfig as $_Config)
+                                            {{-- @dd($_Config) --}}
                                                 @if ($_Config->type = '1')
                                                     <div class="col-md-6">
                                                         <div class="form-group">

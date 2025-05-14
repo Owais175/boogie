@@ -9,20 +9,26 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="social-links">
+                    {{-- @dd($tiktok->flag_value) --}}
                     <span>
-                        <a href="https://x.com/Boogietoken">
+                        <a href="{{$twitter->flag_value}}">
                             <img src="{{ asset('assets/images/twitter.avif') }}" class="img-fluid" alt="">
                         </a>
                     </span>
                     <span>
-                        <a href="https://t.me/Boogieofficialgroup">
+                        <a href="{{$telegram->flag_value}}">
                             <img src="{{ asset('assets/images/telegram_edited_edited.png') }}" class="img-fluid"
                                 alt="">
                         </a>
                     </span>
                     <span>
-                        <a href="javascript:;">
+                        <a href="{{$tiktok->flag_value}}">
                             <img src="{{ asset('assets/images/Tiktok.png') }}" class="img-fluid" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="{{$insta->flag_value}}">
+                            <img src="{{ asset('assets/images/instagram.png') }}"  class="img-fluid" alt="">
                         </a>
                     </span>
                 </div>

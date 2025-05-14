@@ -79,9 +79,14 @@ class HomeController extends Controller
         $logo = DB::table('logos')->pluck('image');
         $address = DB::table('m_flag')->pluck('flag_value');
         $images = DB::table('gallery')->where('status', 'approved')->get();
+        $insta = DB::table('m_flag')->where('flag_type', 'InstagramLINK')->where('is_active' , '1')->first();
+        $tiktok = DB::table('m_flag')->where('flag_type', 'TikTok')->where('is_active' , '1')->first();
+        $telegram = DB::table('m_flag')->where('flag_type', 'Telegram')->where('is_active' , '1')->first();
+        $twitter = DB::table('m_flag')->where('flag_type', 'TWITTERLINK')->where('is_active' , '1')->first();
+        // dd($tiktok);
         // dd($images);
         
-        return view('welcome', compact('page', 'section', 'logo', 'address' , 'images'));
+        return view('welcome', compact('page', 'section', 'logo', 'address' , 'images' , 'insta' , 'tiktok', 'telegram' , 'twitter'));
 
     }
     
